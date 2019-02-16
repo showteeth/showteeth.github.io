@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>如何搭建基于Hexo的独立博客 | showteeth&#39;s blog</title>
+  
+  
+
+  <link rel="alternate" href="/atom.xml" title="showteeth's blog">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#f24e32">
+  
+  <meta name="msapplication-TileColor" content="#f24e32">
+  
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/browserconfig.xml">
+  
+  
+  <!-- link -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+
+  
+  
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicon.ico" type="image/x-icon">
+  
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/favicon-32x32.png" type="image/x-icon" sizes="32x32">
+  
+  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/apple-touch-icon.png" type="image/png" sizes="180x180">
+  
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/safari-pinned-tab.svg" color="#f24e32">
+  
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/site.webmanifest">
+  
+  
+
+  
+
+
+  
+  <link rel="stylesheet" href="/style.css">
+  
+
+  
+
+
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar" class="pure"></div>
+</div>
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header pure">
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/">
+        
+          showteeth's blog
+        
+      </a>
+			<div class="menu">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a id="home" class="nav flat-box" href="/">
+									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="archives" class="nav flat-box" href="/archives/">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="projects" class="nav flat-box" href="/projects/">
+									<i class="fas fa-flask fa-fw"></i>&nbsp;项目
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="friends" class="nav flat-box" href="/friends/">
+									<i class="fas fa-users fa-fw"></i>&nbsp;友链
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="about" class="nav flat-box" href="/about/">
+									<i class="fas fa-user fa-fw"></i>&nbsp;关于我
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
+				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="home" class="nav flat-box" href="/">
+											<i class="fas fa-home fa-fw"></i>&nbsp;主页
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="archives" class="nav flat-box" href="/archives/">
+											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="projects" class="nav flat-box" href="/projects/">
+											<i class="fas fa-flask fa-fw"></i>&nbsp;项目
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="friends" class="nav flat-box" href="/friends/">
+											<i class="fas fa-users fa-fw"></i>&nbsp;友链
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="about" class="nav flat-box" href="/about/">
+											<i class="fas fa-user fa-fw"></i>&nbsp;关于我
+										</a>
+                  </li>
+              
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
+<section class="meta">
+  
+  <div class="meta" id="header-meta">
+    
+      
+          <h1 class="title">如何搭建基于Hexo的独立博客</h1>
+      
+    
+
+    
+      <time class="metatag time">
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-02-16
+      </time>
+    
+
+    
+      
+    
+    <div class="metatag cats">
+        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;<a class="categories" href="/categories/分类A/">分类A</a>&nbsp;/&nbsp;<a class="categories" href="/categories/分类A/分类B/">分类B</a>&nbsp;/&nbsp;<a class="categories" href="/categories/分类C/">分类C</a>&nbsp;/&nbsp;<a class="categories" href="/categories/分类C/分类D/">分类D</a>
+    </div>
+
+
+    
+
+    
+      
+        <div class="metatag browse busuanzi"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+          &nbsp;<span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </div>
+      
+    
+
+    
+
+  </div>
+</section>
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <p>这是预览</p>
+<a id="more"></a>
+<h1 id="exseek-g-4-workflow"><a href="#exseek-g-4-workflow" class="headerlink" title="exseek g.4 workflow"></a>exseek g.4 workflow</h1><h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><h3 id="构建原始表达矩阵"><a href="#构建原始表达矩阵" class="headerlink" title="构建原始表达矩阵"></a>构建原始表达矩阵</h3><h4 id="quality-control（质量控制）"><a href="#quality-control（质量控制）" class="headerlink" title="quality control（质量控制）"></a>quality control（质量控制）</h4><ul>
+<li>tool：fastqc<h4 id="Trimming-adaptor（去除adaptor）"><a href="#Trimming-adaptor（去除adaptor）" class="headerlink" title="Trimming adaptor（去除adaptor）"></a>Trimming adaptor（去除adaptor）</h4></li>
+<li>tool：cutadapt</li>
+<li>paras： -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -m 16 -q 30 –trim-n<h4 id="sequential-mapping"><a href="#sequential-mapping" class="headerlink" title="sequential mapping"></a>sequential mapping</h4></li>
+<li>tool：<em>bowtie2</em>、<em>samtools</em>、 <strong>rsem-tbam2gbam</strong></li>
+<li>paras： -p 4 –sensitive-local –norc –no-unal</li>
+<li><strong>mapping with order</strong>：<em>rRNA, miRNA, piRNA, Y_RNA, srpRNA, tRNA,snRNA, snoRNA, lncRNA, mRNA, tucp, human genome</em><h4 id="feature-count"><a href="#feature-count" class="headerlink" title="feature count"></a>feature count</h4></li>
+<li>tool： featureCounts</li>
+<li>para：-t exon -g transcript_id -s 1<h4 id="merge-expression-matrix-of-5-samples"><a href="#merge-expression-matrix-of-5-samples" class="headerlink" title="merge expression matrix of 5 samples"></a>merge expression matrix of 5 samples</h4></li>
+<li>需要和实验室构建的表达矩阵进行相关性的分析，看看同学们构建的表达矩阵是不是正确的</li>
+</ul>
+<h3 id="Preprocessing-of-raw-expression-matrix"><a href="#Preprocessing-of-raw-expression-matrix" class="headerlink" title="Preprocessing of raw expression matrix"></a>Preprocessing of raw expression matrix</h3><h4 id="filter（过滤低质量的样本）"><a href="#filter（过滤低质量的样本）" class="headerlink" title="filter（过滤低质量的样本）"></a>filter（过滤低质量的样本）</h4><p>基于不同RNA类型reads的比例<strong>制定了一套标准</strong>用于对样本进行质量控制</p>
+<ul>
+<li>标准： <strong>sequencing depth,rRNA content, the proportion of reads mapped to transcriptome and genome</strong><h4 id="normalization（对测序深度标准化）"><a href="#normalization（对测序深度标准化）" class="headerlink" title="normalization（对测序深度标准化）"></a>normalization（对测序深度标准化）</h4><h5 id="methods-1"><a href="#methods-1" class="headerlink" title="methods:"></a>methods:</h5></li>
+<li>Counts per Million (CPM) —&gt;<strong>python</strong></li>
+<li>Counts per Million with miRNA and piRNA removed  —&gt;<strong>python</strong></li>
+<li>Internal Reference Genes—&gt;<strong>R</strong></li>
+<li>Relative Log Expression (RLE) normalization—&gt;<strong>R</strong></li>
+<li>Trimmed Mean of M-values (TMM) normalization—&gt;<strong>R</strong></li>
+<li>SCnorm—&gt;<strong>R</strong><h4 id="imputation（补全低表达的基因）"><a href="#imputation（补全低表达的基因）" class="headerlink" title="imputation（补全低表达的基因）"></a>imputation（补全低表达的基因）</h4></li>
+<li>package： Scimpute<h4 id="remove-batch-effect（去除批次效应）"><a href="#remove-batch-effect（去除批次效应）" class="headerlink" title="remove batch effect（去除批次效应）"></a>remove batch effect（去除批次效应）</h4></li>
+<li>packages： RUVSeq、ComBat</li>
+</ul>
+<h3 id="评估预处理得到的矩阵"><a href="#评估预处理得到的矩阵" class="headerlink" title="评估预处理得到的矩阵"></a>评估预处理得到的矩阵</h3><h4 id="评估不同的标准化方法"><a href="#评估不同的标准化方法" class="headerlink" title="评估不同的标准化方法"></a>评估不同的标准化方法</h4><h5 id="distribution-of-counts-in-each-sample—-gt-boxplot"><a href="#distribution-of-counts-in-each-sample—-gt-boxplot" class="headerlink" title="distribution of counts in each sample—&gt;boxplot"></a>distribution of counts in each sample—&gt;<em>boxplot</em></h5><ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/pubmed/22988256" target="_blank" rel="noopener">参考文献</a><h5 id="log2-scaled-variance-of-each-feature-among-samples—-gt-boxplot"><a href="#log2-scaled-variance-of-each-feature-among-samples—-gt-boxplot" class="headerlink" title="log2 scaled variance of each feature among samples—&gt;boxplot"></a>log2 scaled variance of each feature among samples—&gt;<em>boxplot</em></h5></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pubmed/22988256" target="_blank" rel="noopener">参考文献</a><h5 id="RLE-plot"><a href="#RLE-plot" class="headerlink" title="RLE plot"></a>RLE plot</h5></li>
+<li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0191629" target="_blank" rel="noopener">参考文献</a></li>
+<li>实现步骤：<ul>
+<li>log2 scaled expression matrix</li>
+<li>median of scaled counts in each gene was subtracted from matrxi</li>
+<li>in each samples,  all of the expression level deviate from the median in this row was visualized via boxplot<h5 id="Median-regression"><a href="#Median-regression" class="headerlink" title="Median regression"></a>Median regression</h5></li>
+</ul>
+</li>
+<li>tools： stats_models in python</li>
+<li>quantify the <strong>relationship</strong> between <strong>sequencing depth</strong> and <strong>counts</strong> for transcripts with various level</li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5473255/" target="_blank" rel="noopener">参考文献</a><h4 id="评估不同的标准化方法-1"><a href="#评估不同的标准化方法-1" class="headerlink" title="评估不同的标准化方法"></a>评估不同的标准化方法</h4><h5 id="Hierarchical-clustering"><a href="#Hierarchical-clustering" class="headerlink" title="Hierarchical clustering"></a>Hierarchical clustering</h5></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3880143/" target="_blank" rel="noopener">参考文献</a></li>
+<li>package：scipy <h5 id="tSNE-plot、QC-plot、RLE-plot"><a href="#tSNE-plot、QC-plot、RLE-plot" class="headerlink" title="tSNE plot、QC plot、RLE plot"></a>tSNE plot、QC plot、RLE plot</h5></li>
+</ul>
+<h3 id="识别未比对上的reads来源"><a href="#识别未比对上的reads来源" class="headerlink" title="识别未比对上的reads来源"></a>识别未比对上的reads来源</h3><h2 id="results"><a href="#results" class="headerlink" title="results"></a>results</h2><h3 id="mapping-and-sample-QC"><a href="#mapping-and-sample-QC" class="headerlink" title="mapping and sample QC"></a>mapping and sample QC</h3><h4 id="pearson-correlation"><a href="#pearson-correlation" class="headerlink" title="pearson correlation"></a>pearson correlation</h4><h4 id="mapped-reads-distribution（total-amp-each-sample）"><a href="#mapped-reads-distribution（total-amp-each-sample）" class="headerlink" title="mapped reads distribution（total &amp; each sample）"></a>mapped reads distribution（total &amp; each sample）</h4><ul>
+<li>line plot<h4 id="mapped-reads-distribution（RNA-type-amp-each-sample）"><a href="#mapped-reads-distribution（RNA-type-amp-each-sample）" class="headerlink" title="mapped reads distribution（RNA type &amp; each sample）"></a>mapped reads distribution（RNA type &amp; each sample）</h4></li>
+<li>line plot</li>
+<li>pie plot</li>
+<li>stacked bar plot<h4 id="mapped-read-number-variation-in-all-sample-（all-sample-amp-violin-plot）"><a href="#mapped-read-number-variation-in-all-sample-（all-sample-amp-violin-plot）" class="headerlink" title="mapped read number variation in all sample （all sample &amp; violin plot）"></a>mapped read number variation in all sample （all sample &amp; violin plot）</h4></li>
+</ul>
+<h3 id="filter-with-given-criterion"><a href="#filter-with-given-criterion" class="headerlink" title="filter with given criterion"></a>filter with given criterion</h3><h4 id="tSNE-plot-of-raw-expression-matrix"><a href="#tSNE-plot-of-raw-expression-matrix" class="headerlink" title="tSNE plot of raw expression matrix"></a>tSNE plot of raw expression matrix</h4><h5 id="RNA-isolation-batch"><a href="#RNA-isolation-batch" class="headerlink" title="RNA isolation batch"></a>RNA isolation batch</h5><h5 id="library-preparation-day-batch"><a href="#library-preparation-day-batch" class="headerlink" title="library preparation day batch"></a>library preparation day batch</h5><h5 id="gel-cut-selection-day-batch"><a href="#gel-cut-selection-day-batch" class="headerlink" title="gel cut selection day batch"></a>gel cut selection day batch</h5><h5 id="cancer-type-batch"><a href="#cancer-type-batch" class="headerlink" title="cancer type batch"></a>cancer type batch</h5><h3 id="normalization"><a href="#normalization" class="headerlink" title="normalization"></a>normalization</h3><h4 id="expression-level-corr-with-sequencing-depth"><a href="#expression-level-corr-with-sequencing-depth" class="headerlink" title="expression level corr with sequencing depth"></a>expression level corr with sequencing depth</h4><h3 id="imputation"><a href="#imputation" class="headerlink" title="imputation"></a>imputation</h3><h4 id="after-normalization-with-TMM"><a href="#after-normalization-with-TMM" class="headerlink" title="after normalization with TMM"></a>after normalization with TMM</h4><ul>
+<li>package：SCimpute</li>
+</ul>
+<h3 id="remove-batch-effect"><a href="#remove-batch-effect" class="headerlink" title="remove batch effect"></a>remove batch effect</h3><h4 id="visulization-batch-effect"><a href="#visulization-batch-effect" class="headerlink" title="visulization batch effect"></a>visulization batch effect</h4><h5 id="tSNE"><a href="#tSNE" class="headerlink" title="tSNE"></a>tSNE</h5><h5 id="hierarchical-clustering"><a href="#hierarchical-clustering" class="headerlink" title="hierarchical clustering"></a>hierarchical clustering</h5><h5 id="RLE-plot-1"><a href="#RLE-plot-1" class="headerlink" title="RLE plot"></a>RLE plot</h5><h5 id="QC-plot"><a href="#QC-plot" class="headerlink" title="QC plot"></a>QC plot</h5><h4 id="remove-batch-effect-1"><a href="#remove-batch-effect-1" class="headerlink" title="remove batch effect"></a>remove batch effect</h4><h5 id="RUVs-function-in-RUVseq-package"><a href="#RUVs-function-in-RUVseq-package" class="headerlink" title="RUVs function  (in RUVseq package)"></a>RUVs function  (in RUVseq package)</h5><h5 id="Combat-function-in-sva-package"><a href="#Combat-function-in-sva-package" class="headerlink" title="Combat function (in sva package)"></a>Combat function (in sva package)</h5><h5 id="visualization-batch-effect-again-to-get-best-para"><a href="#visualization-batch-effect-again-to-get-best-para" class="headerlink" title="visualization batch effect again to get best para"></a>visualization batch effect again to get best para</h5><h4 id="RLE-plot-to-verify-normalization-methds-can-减轻batch-effect"><a href="#RLE-plot-to-verify-normalization-methds-can-减轻batch-effect" class="headerlink" title="RLE plot to verify normalization methds can 减轻batch effect"></a>RLE plot to verify normalization methds can 减轻batch effect</h4><h3 id="Analysis-of-Unmapped-Reads"><a href="#Analysis-of-Unmapped-Reads" class="headerlink" title="Analysis of Unmapped Reads"></a>Analysis of Unmapped Reads</h3><h2 id="discussion"><a href="#discussion" class="headerlink" title="discussion"></a>discussion</h2><h3 id="evaluation-of-different-normalization-strategies"><a href="#evaluation-of-different-normalization-strategies" class="headerlink" title="evaluation of different normalization strategies"></a>evaluation of different normalization strategies</h3><h3 id="The-Necessity-of-Remove-Batch-Effect-After-Normalization"><a href="#The-Necessity-of-Remove-Batch-Effect-After-Normalization" class="headerlink" title="The Necessity of Remove Batch Effect After Normalization"></a>The Necessity of Remove Batch Effect After Normalization</h3><h3 id="The-Sequence-of-Filtering-Imputation-Normalization-and-Removing-Batch-Effect"><a href="#The-Sequence-of-Filtering-Imputation-Normalization-and-Removing-Batch-Effect" class="headerlink" title="The Sequence of Filtering, Imputation, Normalization, and Removing  Batch Effect"></a>The Sequence of Filtering, Imputation, Normalization, and Removing  Batch Effect</h3><h3 id="The-Origination-of-Unmapped-Reads"><a href="#The-Origination-of-Unmapped-Reads" class="headerlink" title="The Origination of Unmapped Reads"></a>The Origination of Unmapped Reads</h3><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2>
+      </div>
+        
+          <section class="meta" id="footer-meta">
+            
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-02-16T17:00:27+08:00" content="2019-02-16"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
+                &nbsp;2019-02-16
+              </time>
+            
+            
+                
+                <div class="metatag tags"><a class="tag" href="/tags/blog/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;blog</a></div> <div class="metatag tags"><a class="tag" href="/tags/Hexo/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;Hexo</a></div>
+            
+            
+              
+  <div class="metatag share -mob-share-list">
+    <i class="left fas fa-share-alt fa-fw" aria-hidden="true"></i>
+    <div class="-mob-share-list share-body">
+      
+        
+          <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/16/test_blog/&title=如何搭建基于Hexo的独立博客 | showteeth's blog&summary=这是预览">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2019/02/16/test_blog/&title=如何搭建基于Hexo的独立博客 | showteeth's blog&summary=这是预览">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3a226DQAxF0fz/T1OprxWwjz2pNJ7NU9QSYBHJ8u3zwcf1e/Az/55P/n53zrJDhgwZ2zKux6P2EHfffT7n7jOiypAh4wDGc5C9+0z+S15E7WoyZMiQ0Q+4Qbi8uYsMGTJkrGKkYZokfzJkyJBRK0RrYZGUxJ0CWIYMGScw0sHAf37+4nxDhgwZmzCurx214WXtqWTIkDGbQUpK8kD8OjU2SkZlyJAxlFFrn6WrEjzRTBNTGTJknMPoPEQaXtP2HBpIyJAh4wBGmpb1g2w6YHi5rwwZMkYzamGukz6uCujFSawMGTI2ZPAvPIfCTlufF9Ivv4MMGTKGMviian9plV9twW8iQ4aMQYzn8EeacemQkiN5S06GDBmzGXyQmW6TpuGYF8+tlQsZMmRsyCDhlSeOnfYcT1VfQq0MGTLGMcgt0zkDL1zTMQO6iwwZMoYyeCnLy9q0DF7wCmTIkDGakYbd4HLtOWOwMyJDhoyhDLIAwZv7aejkzT5Ui8uQIWMogw8Oay3+NFijOQZ5TTJkyBjEII3+2koEx/PhJWq0yZAhYxyjEwrTJl26YFF7ZTJkyJjHuMKjnzKmKxoo6ZQhQ8ZoBj/4yhdJMfmiGMfLkCFjNqMzHugsUpDCNQi4MmTIOIBRW4wgzTL+IhasXMiQIUMGKGs709RWySpDhgwZpeZ+Go55cJchQ8aZjP5IMg27a8cGMmTImM1I8y6S5JEQmbb2FgwyZciQsR/jB0UePOIRq9+gAAAAAElFTkSuQmCC">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+          
+          </a>
+        
+      
+        
+          <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/02/16/test_blog/&title=如何搭建基于Hexo的独立博客 | showteeth's blog&summary=这是预览">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3a226DQAxF0fz/T1OprxWwjz2pNJ7NU9QSYBHJ8u3zwcf1e/Az/55P/n53zrJDhgwZ2zKux6P2EHfffT7n7jOiypAh4wDGc5C9+0z+S15E7WoyZMiQ0Q+4Qbi8uYsMGTJkrGKkYZokfzJkyJBRK0RrYZGUxJ0CWIYMGScw0sHAf37+4nxDhgwZmzCurx214WXtqWTIkDGbQUpK8kD8OjU2SkZlyJAxlFFrn6WrEjzRTBNTGTJknMPoPEQaXtP2HBpIyJAh4wBGmpb1g2w6YHi5rwwZMkYzamGukz6uCujFSawMGTI2ZPAvPIfCTlufF9Ivv4MMGTKGMviian9plV9twW8iQ4aMQYzn8EeacemQkiN5S06GDBmzGXyQmW6TpuGYF8+tlQsZMmRsyCDhlSeOnfYcT1VfQq0MGTLGMcgt0zkDL1zTMQO6iwwZMoYyeCnLy9q0DF7wCmTIkDGakYbd4HLtOWOwMyJDhoyhDLIAwZv7aejkzT5Ui8uQIWMogw8Oay3+NFijOQZ5TTJkyBjEII3+2koEx/PhJWq0yZAhYxyjEwrTJl26YFF7ZTJkyJjHuMKjnzKmKxoo6ZQhQ8ZoBj/4yhdJMfmiGMfLkCFjNqMzHugsUpDCNQi4MmTIOIBRW4wgzTL+IhasXMiQIUMGKGs709RWySpDhgwZpeZ+Go55cJchQ8aZjP5IMg27a8cGMmTImM1I8y6S5JEQmbb2FgwyZciQsR/jB0UePOIRq9+gAAAAAElFTkSuQmCC">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+          
+          </a>
+        
+      
+    </div>
+  </div>
+
+
+            
+          </section>
+        
+
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2019/02/16/hello-world/" rel="prev" title="Hello World">
+                                  
+                                      Hello World
+                                  
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      
+      
+        <div class="recommended_posts">
+    <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;相关文章</h4>
+    
+</div>
+
+      
+      
+        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+        
+        
+        
+          
+            <section id="comments">
+              <div id="valine_container" class="valine_thread">
+                <i class="fas fa-spinner fa-spin fa-fw"></i>
+              </div>
+            </section>
+          
+        
+      
+    </section>
+  </article>
+
+
+
+<script>
+    window.subData = {
+        title: '如何搭建基于Hexo的独立博客',
+        tools: true
+    }
+</script>
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        
+  <section class="category">
+    
+<header class="pure">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+  
+</header>
+
+    <div class="content pure">
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/Cocoa-Dev/" href="/categories/Cocoa-Dev/"><div class="name">Cocoa Dev</div><div class="badge">(0)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/分类A/" href="/categories/分类A/"><div class="name">分类A</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/分类A/分类B/" href="/categories/分类A/分类B/"><div class="name">分类B</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/分类C/" href="/categories/分类C/"><div class="name">分类C</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/分类C/分类D/" href="/categories/分类C/分类D/"><div class="name">分类D</div><div class="badge">(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="tagcloud">
+    
+<header class="pure">
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class="content pure">
+      <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
+  
+    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://xaoxuu.com/projects/" title="https://xaoxuu.com/projects/">
+    <i class="fas fa-arrow-right fa-fw"></i></a>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/axkit/" href="https://xaoxuu.com/wiki/axkit/">
+          <div class="name">
+            
+              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;AXKit
+          </div>
+          
+            <div class="badge">(iOS开源库)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/noticeboard/" href="https://xaoxuu.com/wiki/noticeboard/">
+          <div class="name">
+            
+              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;NoticeBoard
+          </div>
+          
+            <div class="badge">(iOS开源库)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/heartmate/" href="https://xaoxuu.com/heartmate/">
+          <div class="name">
+            
+              <i class="fas fa-heartbeat fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;HeartMate
+          </div>
+          
+            <div class="badge">(iOS应用程序)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/">
+          <div class="name">
+            
+              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Material X
+          </div>
+          
+            <div class="badge">(Hexo博客主题)</div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="toc-wrapper">
+    
+<header class="pure">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content pure">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#exseek-g-4-workflow"><span class="toc-text">exseek g.4 workflow</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#methods"><span class="toc-text">methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#构建原始表达矩阵"><span class="toc-text">构建原始表达矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#quality-control（质量控制）"><span class="toc-text">quality control（质量控制）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Trimming-adaptor（去除adaptor）"><span class="toc-text">Trimming adaptor（去除adaptor）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sequential-mapping"><span class="toc-text">sequential mapping</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#feature-count"><span class="toc-text">feature count</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#merge-expression-matrix-of-5-samples"><span class="toc-text">merge expression matrix of 5 samples</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Preprocessing-of-raw-expression-matrix"><span class="toc-text">Preprocessing of raw expression matrix</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#filter（过滤低质量的样本）"><span class="toc-text">filter（过滤低质量的样本）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#normalization（对测序深度标准化）"><span class="toc-text">normalization（对测序深度标准化）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#methods-1"><span class="toc-text">methods:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#imputation（补全低表达的基因）"><span class="toc-text">imputation（补全低表达的基因）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#remove-batch-effect（去除批次效应）"><span class="toc-text">remove batch effect（去除批次效应）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评估预处理得到的矩阵"><span class="toc-text">评估预处理得到的矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#评估不同的标准化方法"><span class="toc-text">评估不同的标准化方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#distribution-of-counts-in-each-sample—-gt-boxplot"><span class="toc-text">distribution of counts in each sample—&gt;boxplot</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#log2-scaled-variance-of-each-feature-among-samples—-gt-boxplot"><span class="toc-text">log2 scaled variance of each feature among samples—&gt;boxplot</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RLE-plot"><span class="toc-text">RLE plot</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Median-regression"><span class="toc-text">Median regression</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#评估不同的标准化方法-1"><span class="toc-text">评估不同的标准化方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Hierarchical-clustering"><span class="toc-text">Hierarchical clustering</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#tSNE-plot、QC-plot、RLE-plot"><span class="toc-text">tSNE plot、QC plot、RLE plot</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#识别未比对上的reads来源"><span class="toc-text">识别未比对上的reads来源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-text">results</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mapping-and-sample-QC"><span class="toc-text">mapping and sample QC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#pearson-correlation"><span class="toc-text">pearson correlation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapped-reads-distribution（total-amp-each-sample）"><span class="toc-text">mapped reads distribution（total &amp; each sample）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapped-reads-distribution（RNA-type-amp-each-sample）"><span class="toc-text">mapped reads distribution（RNA type &amp; each sample）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapped-read-number-variation-in-all-sample-（all-sample-amp-violin-plot）"><span class="toc-text">mapped read number variation in all sample （all sample &amp; violin plot）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#filter-with-given-criterion"><span class="toc-text">filter with given criterion</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tSNE-plot-of-raw-expression-matrix"><span class="toc-text">tSNE plot of raw expression matrix</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#RNA-isolation-batch"><span class="toc-text">RNA isolation batch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#library-preparation-day-batch"><span class="toc-text">library preparation day batch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#gel-cut-selection-day-batch"><span class="toc-text">gel cut selection day batch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#cancer-type-batch"><span class="toc-text">cancer type batch</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#normalization"><span class="toc-text">normalization</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#expression-level-corr-with-sequencing-depth"><span class="toc-text">expression level corr with sequencing depth</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#imputation"><span class="toc-text">imputation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#after-normalization-with-TMM"><span class="toc-text">after normalization with TMM</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#remove-batch-effect"><span class="toc-text">remove batch effect</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#visulization-batch-effect"><span class="toc-text">visulization batch effect</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#tSNE"><span class="toc-text">tSNE</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#hierarchical-clustering"><span class="toc-text">hierarchical clustering</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RLE-plot-1"><span class="toc-text">RLE plot</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#QC-plot"><span class="toc-text">QC plot</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#remove-batch-effect-1"><span class="toc-text">remove batch effect</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#RUVs-function-in-RUVseq-package"><span class="toc-text">RUVs function  (in RUVseq package)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Combat-function-in-sva-package"><span class="toc-text">Combat function (in sva package)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#visualization-batch-effect-again-to-get-best-para"><span class="toc-text">visualization batch effect again to get best para</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RLE-plot-to-verify-normalization-methds-can-减轻batch-effect"><span class="toc-text">RLE plot to verify normalization methds can 减轻batch effect</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Analysis-of-Unmapped-Reads"><span class="toc-text">Analysis of Unmapped Reads</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#discussion"><span class="toc-text">discussion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#evaluation-of-different-normalization-strategies"><span class="toc-text">evaluation of different normalization strategies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Necessity-of-Remove-Batch-Effect-After-Normalization"><span class="toc-text">The Necessity of Remove Batch Effect After Normalization</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Sequence-of-Filtering-Imputation-Normalization-and-Removing-Batch-Effect"><span class="toc-text">The Sequence of Filtering, Imputation, Normalization, and Removing  Batch Effect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Origination-of-Unmapped-Reads"><span class="toc-text">The Origination of Unmapped Reads</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+      
+    
+  
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="https://github.com/showteeth" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+  </div>
+</footer>
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        const $reveal = $('.reveal');
+    		if ($reveal.length === 0) return;
+    		const sr = ScrollReveal({ distance: 0 });
+    		sr.reveal('.reveal');
+      });
+    </script>
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        Waves.attach('.flat-btn', ['waves-button']);
+        Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+        Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+        Waves.attach('.flat-box', ['waves-block']);
+        Waves.attach('.float-box', ['waves-block', 'waves-float']);
+        Waves.attach('.waves-image');
+        Waves.init();
+      });
+    </script>
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+  
+  
+  
+
+
+  
+  
+  
+    
+      
+      
+      
+        
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          
+            
+              <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1/js/volantis.min.js"></script>
+            
+          
+          <script>
+          var GUEST_INFO = ['nick','mail','link'];
+          var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+          });
+          var notify = 'false' == true;
+          var verify = 'false' == true;
+          var valine = new Valine();
+          valine.init({
+            el: '#valine_container',
+            notify: notify,
+            verify: verify,
+            guest_info: guest_info,
+            
+            appId: "1rN07DpQRE12WD9Au1SuWCww-gzGzoHsz",
+            appKey: "EAyPrjSfiYnuRDiIpwczBeJ4",
+            placeholder: "快来评论吧~",
+            pageSize:'10',
+            avatar:'mp',
+            lang:'zh-cn',
+            highlight:''
+          })
+          </script>
+        
+      
+    
+  
+  
+    <script src="/js/app.js"></script>
+<script src="/js/search.js"></script>
+  
+
+
+
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
