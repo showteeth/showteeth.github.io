@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-16T15:52:17.419Z</updated>
+  <updated>2019-02-17T07:43:25.957Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,69 +18,89 @@
   
   <entry>
     <title>test_templete</title>
+    <link href="http://yoursite.com/2019/02/17/hello-world/"/>
+    <id>http://yoursite.com/2019/02/17/hello-world/</id>
+    <published>2019-02-16T16:00:00.000Z</published>
+    <updated>2019-02-17T07:43:25.957Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h5><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract:&quot;&gt;&lt;/a&gt;Abstract:&lt;/h5&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+    
+    
+      <category term="hello-world" scheme="http://yoursite.com/tags/hello-world/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test_templete</title>
     <link href="http://yoursite.com/2019/02/16/test-templete/"/>
     <id>http://yoursite.com/2019/02/16/test-templete/</id>
     <published>2019-02-16T15:38:36.000Z</published>
-    <updated>2019-02-16T15:52:17.419Z</updated>
+    <updated>2019-02-17T05:37:34.213Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h1><p>test</p><a id="more"></a><p># </p>]]></content>
+    <content type="html"><![CDATA[<h5 id="Abstract-测试创建博客模板"><a href="#Abstract-测试创建博客模板" class="headerlink" title="Abstract: 测试创建博客模板"></a>Abstract: 测试创建博客模板</h5><a id="more"></a><h1 id="this-is-content"><a href="#this-is-content" class="headerlink" title="this is content"></a>this is content</h1><h2 id="this-is-sub-title"><a href="#this-is-sub-title" class="headerlink" title="this is sub title"></a>this is sub title</h2><p>“百度”二字，来自于八百年前南宋词人辛弃疾的一句词：众里寻他千百度。这句话描述了词人对理想的执着追求。1999年底，身在美国硅谷的李彦宏看到了中国互联网及中文搜索引擎服务的巨大发展潜力，抱着技术改变世界的梦想，他毅然辞掉硅谷的高薪工作，携搜索引擎专利技术，于 2000年1月1日在中关村创建了百度公司。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract:&quot;&gt;&lt;/a&gt;Abstract:&lt;/h1&gt;&lt;p&gt;test&lt;/p&gt;
+      &lt;h5 id=&quot;Abstract-测试创建博客模板&quot;&gt;&lt;a href=&quot;#Abstract-测试创建博客模板&quot; class=&quot;headerlink&quot; title=&quot;Abstract: 测试创建博客模板&quot;&gt;&lt;/a&gt;Abstract: 测试创建博客模板&lt;/h5&gt;
     
     </summary>
     
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+    
+    
+      <category term="templete" scheme="http://yoursite.com/tags/templete/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2019/02/16/hello-world/"/>
-    <id>http://yoursite.com/2019/02/16/hello-world/</id>
-    <published>2019-02-15T16:25:14.211Z</published>
-    <updated>2019-02-16T10:48:20.134Z</updated>
+    <title>test-top</title>
+    <link href="http://yoursite.com/2019/02/15/test-top/"/>
+    <id>http://yoursite.com/2019/02/15/test-top/</id>
+    <published>2019-02-14T16:00:00.000Z</published>
+    <updated>2019-02-17T05:50:32.245Z</updated>
     
-    <content type="html"><![CDATA[<p>Abstract:<br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h5 id="Abstract-测试置顶操作"><a href="#Abstract-测试置顶操作" class="headerlink" title="Abstract: 测试置顶操作"></a>Abstract: 测试置顶操作</h5><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><h2 id="this-is-subtitle"><a href="#this-is-subtitle" class="headerlink" title="this is subtitle"></a>this is subtitle</h2>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Abstract:&lt;br&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+      &lt;h5 id=&quot;Abstract-测试置顶操作&quot;&gt;&lt;a href=&quot;#Abstract-测试置顶操作&quot; class=&quot;headerlink&quot; title=&quot;Abstract: 测试置顶操作&quot;&gt;&lt;/a&gt;Abstract: 测试置顶操作&lt;/h5&gt;
     
     </summary>
     
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+    
+    
+      <category term="top" scheme="http://yoursite.com/tags/top/"/>
     
   </entry>
   
   <entry>
-    <title>如何搭建基于Hexo的独立博客</title>
-    <link href="http://yoursite.com/2019/02/16/test_blog/"/>
-    <id>http://yoursite.com/2019/02/16/test_blog/</id>
-    <published>2019-02-15T16:00:00.000Z</published>
-    <updated>2019-02-16T09:42:13.532Z</updated>
+    <title>test-top2</title>
+    <link href="http://yoursite.com/2019/02/15/test-top2/"/>
+    <id>http://yoursite.com/2019/02/15/test-top2/</id>
+    <published>2019-02-14T16:00:00.000Z</published>
+    <updated>2019-02-17T06:20:49.419Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="exseek-g-4-workflow"><a href="#exseek-g-4-workflow" class="headerlink" title="exseek g.4 workflow"></a>exseek g.4 workflow</h1><h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><h3 id="构建原始表达矩阵"><a href="#构建原始表达矩阵" class="headerlink" title="构建原始表达矩阵"></a>构建原始表达矩阵</h3><h4 id="quality-control（质量控制）"><a href="#quality-control（质量控制）" class="headerlink" title="quality control（质量控制）"></a>quality control（质量控制）</h4><ul><li>tool：fastqc</li></ul><a id="more"></a><h4 id="Trimming-adaptor（去除adaptor）"><a href="#Trimming-adaptor（去除adaptor）" class="headerlink" title="Trimming adaptor（去除adaptor）"></a>Trimming adaptor（去除adaptor）</h4><ul><li>tool：cutadapt</li><li>paras： -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -m 16 -q 30 –trim-n<h4 id="sequential-mapping"><a href="#sequential-mapping" class="headerlink" title="sequential mapping"></a>sequential mapping</h4></li><li>tool：<em>bowtie2</em>、<em>samtools</em>、 <strong>rsem-tbam2gbam</strong></li><li>paras： -p 4 –sensitive-local –norc –no-unal</li><li><strong>mapping with order</strong>：<em>rRNA, miRNA, piRNA, Y_RNA, srpRNA, tRNA,snRNA, snoRNA, lncRNA, mRNA, tucp, human genome</em><h4 id="feature-count"><a href="#feature-count" class="headerlink" title="feature count"></a>feature count</h4></li><li>tool： featureCounts</li><li>para：-t exon -g transcript_id -s 1<h4 id="merge-expression-matrix-of-5-samples"><a href="#merge-expression-matrix-of-5-samples" class="headerlink" title="merge expression matrix of 5 samples"></a>merge expression matrix of 5 samples</h4></li><li>需要和实验室构建的表达矩阵进行相关性的分析，看看同学们构建的表达矩阵是不是正确的</li></ul><h3 id="Preprocessing-of-raw-expression-matrix"><a href="#Preprocessing-of-raw-expression-matrix" class="headerlink" title="Preprocessing of raw expression matrix"></a>Preprocessing of raw expression matrix</h3><h4 id="filter（过滤低质量的样本）"><a href="#filter（过滤低质量的样本）" class="headerlink" title="filter（过滤低质量的样本）"></a>filter（过滤低质量的样本）</h4><p>基于不同RNA类型reads的比例<strong>制定了一套标准</strong>用于对样本进行质量控制</p><ul><li>标准： <strong>sequencing depth,rRNA content, the proportion of reads mapped to transcriptome and genome</strong><h4 id="normalization（对测序深度标准化）"><a href="#normalization（对测序深度标准化）" class="headerlink" title="normalization（对测序深度标准化）"></a>normalization（对测序深度标准化）</h4><h5 id="methods-1"><a href="#methods-1" class="headerlink" title="methods:"></a>methods:</h5></li><li>Counts per Million (CPM) —&gt;<strong>python</strong></li><li>Counts per Million with miRNA and piRNA removed  —&gt;<strong>python</strong></li><li>Internal Reference Genes—&gt;<strong>R</strong></li><li>Relative Log Expression (RLE) normalization—&gt;<strong>R</strong></li><li>Trimmed Mean of M-values (TMM) normalization—&gt;<strong>R</strong></li><li>SCnorm—&gt;<strong>R</strong><h4 id="imputation（补全低表达的基因）"><a href="#imputation（补全低表达的基因）" class="headerlink" title="imputation（补全低表达的基因）"></a>imputation（补全低表达的基因）</h4></li><li>package： Scimpute<h4 id="remove-batch-effect（去除批次效应）"><a href="#remove-batch-effect（去除批次效应）" class="headerlink" title="remove batch effect（去除批次效应）"></a>remove batch effect（去除批次效应）</h4></li><li>packages： RUVSeq、ComBat</li></ul><h3 id="评估预处理得到的矩阵"><a href="#评估预处理得到的矩阵" class="headerlink" title="评估预处理得到的矩阵"></a>评估预处理得到的矩阵</h3><h4 id="评估不同的标准化方法"><a href="#评估不同的标准化方法" class="headerlink" title="评估不同的标准化方法"></a>评估不同的标准化方法</h4><h5 id="distribution-of-counts-in-each-sample—-gt-boxplot"><a href="#distribution-of-counts-in-each-sample—-gt-boxplot" class="headerlink" title="distribution of counts in each sample—&gt;boxplot"></a>distribution of counts in each sample—&gt;<em>boxplot</em></h5><ul><li><a href="https://www.ncbi.nlm.nih.gov/pubmed/22988256" target="_blank" rel="noopener">参考文献</a><h5 id="log2-scaled-variance-of-each-feature-among-samples—-gt-boxplot"><a href="#log2-scaled-variance-of-each-feature-among-samples—-gt-boxplot" class="headerlink" title="log2 scaled variance of each feature among samples—&gt;boxplot"></a>log2 scaled variance of each feature among samples—&gt;<em>boxplot</em></h5></li><li><a href="https://www.ncbi.nlm.nih.gov/pubmed/22988256" target="_blank" rel="noopener">参考文献</a><h5 id="RLE-plot"><a href="#RLE-plot" class="headerlink" title="RLE plot"></a>RLE plot</h5></li><li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0191629" target="_blank" rel="noopener">参考文献</a></li><li>实现步骤：<ul><li>log2 scaled expression matrix</li><li>median of scaled counts in each gene was subtracted from matrxi</li><li>in each samples,  all of the expression level deviate from the median in this row was visualized via boxplot<h5 id="Median-regression"><a href="#Median-regression" class="headerlink" title="Median regression"></a>Median regression</h5></li></ul></li><li>tools： stats_models in python</li><li>quantify the <strong>relationship</strong> between <strong>sequencing depth</strong> and <strong>counts</strong> for transcripts with various level</li><li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5473255/" target="_blank" rel="noopener">参考文献</a><h4 id="评估不同的标准化方法-1"><a href="#评估不同的标准化方法-1" class="headerlink" title="评估不同的标准化方法"></a>评估不同的标准化方法</h4><h5 id="Hierarchical-clustering"><a href="#Hierarchical-clustering" class="headerlink" title="Hierarchical clustering"></a>Hierarchical clustering</h5></li><li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3880143/" target="_blank" rel="noopener">参考文献</a></li><li>package：scipy <h5 id="tSNE-plot、QC-plot、RLE-plot"><a href="#tSNE-plot、QC-plot、RLE-plot" class="headerlink" title="tSNE plot、QC plot、RLE plot"></a>tSNE plot、QC plot、RLE plot</h5></li></ul><h3 id="识别未比对上的reads来源"><a href="#识别未比对上的reads来源" class="headerlink" title="识别未比对上的reads来源"></a>识别未比对上的reads来源</h3><h2 id="results"><a href="#results" class="headerlink" title="results"></a>results</h2><h3 id="mapping-and-sample-QC"><a href="#mapping-and-sample-QC" class="headerlink" title="mapping and sample QC"></a>mapping and sample QC</h3><h4 id="pearson-correlation"><a href="#pearson-correlation" class="headerlink" title="pearson correlation"></a>pearson correlation</h4><h4 id="mapped-reads-distribution（total-amp-each-sample）"><a href="#mapped-reads-distribution（total-amp-each-sample）" class="headerlink" title="mapped reads distribution（total &amp; each sample）"></a>mapped reads distribution（total &amp; each sample）</h4><ul><li>line plot<h4 id="mapped-reads-distribution（RNA-type-amp-each-sample）"><a href="#mapped-reads-distribution（RNA-type-amp-each-sample）" class="headerlink" title="mapped reads distribution（RNA type &amp; each sample）"></a>mapped reads distribution（RNA type &amp; each sample）</h4></li><li>line plot</li><li>pie plot</li><li>stacked bar plot<h4 id="mapped-read-number-variation-in-all-sample-（all-sample-amp-violin-plot）"><a href="#mapped-read-number-variation-in-all-sample-（all-sample-amp-violin-plot）" class="headerlink" title="mapped read number variation in all sample （all sample &amp; violin plot）"></a>mapped read number variation in all sample （all sample &amp; violin plot）</h4></li></ul><h3 id="filter-with-given-criterion"><a href="#filter-with-given-criterion" class="headerlink" title="filter with given criterion"></a>filter with given criterion</h3><h4 id="tSNE-plot-of-raw-expression-matrix"><a href="#tSNE-plot-of-raw-expression-matrix" class="headerlink" title="tSNE plot of raw expression matrix"></a>tSNE plot of raw expression matrix</h4><h5 id="RNA-isolation-batch"><a href="#RNA-isolation-batch" class="headerlink" title="RNA isolation batch"></a>RNA isolation batch</h5><h5 id="library-preparation-day-batch"><a href="#library-preparation-day-batch" class="headerlink" title="library preparation day batch"></a>library preparation day batch</h5><h5 id="gel-cut-selection-day-batch"><a href="#gel-cut-selection-day-batch" class="headerlink" title="gel cut selection day batch"></a>gel cut selection day batch</h5><h5 id="cancer-type-batch"><a href="#cancer-type-batch" class="headerlink" title="cancer type batch"></a>cancer type batch</h5><h3 id="normalization"><a href="#normalization" class="headerlink" title="normalization"></a>normalization</h3><h4 id="expression-level-corr-with-sequencing-depth"><a href="#expression-level-corr-with-sequencing-depth" class="headerlink" title="expression level corr with sequencing depth"></a>expression level corr with sequencing depth</h4><h3 id="imputation"><a href="#imputation" class="headerlink" title="imputation"></a>imputation</h3><h4 id="after-normalization-with-TMM"><a href="#after-normalization-with-TMM" class="headerlink" title="after normalization with TMM"></a>after normalization with TMM</h4><ul><li>package：SCimpute</li></ul><h3 id="remove-batch-effect"><a href="#remove-batch-effect" class="headerlink" title="remove batch effect"></a>remove batch effect</h3><h4 id="visulization-batch-effect"><a href="#visulization-batch-effect" class="headerlink" title="visulization batch effect"></a>visulization batch effect</h4><h5 id="tSNE"><a href="#tSNE" class="headerlink" title="tSNE"></a>tSNE</h5><h5 id="hierarchical-clustering"><a href="#hierarchical-clustering" class="headerlink" title="hierarchical clustering"></a>hierarchical clustering</h5><h5 id="RLE-plot-1"><a href="#RLE-plot-1" class="headerlink" title="RLE plot"></a>RLE plot</h5><h5 id="QC-plot"><a href="#QC-plot" class="headerlink" title="QC plot"></a>QC plot</h5><h4 id="remove-batch-effect-1"><a href="#remove-batch-effect-1" class="headerlink" title="remove batch effect"></a>remove batch effect</h4><h5 id="RUVs-function-in-RUVseq-package"><a href="#RUVs-function-in-RUVseq-package" class="headerlink" title="RUVs function  (in RUVseq package)"></a>RUVs function  (in RUVseq package)</h5><h5 id="Combat-function-in-sva-package"><a href="#Combat-function-in-sva-package" class="headerlink" title="Combat function (in sva package)"></a>Combat function (in sva package)</h5><h5 id="visualization-batch-effect-again-to-get-best-para"><a href="#visualization-batch-effect-again-to-get-best-para" class="headerlink" title="visualization batch effect again to get best para"></a>visualization batch effect again to get best para</h5><h4 id="RLE-plot-to-verify-normalization-methds-can-减轻batch-effect"><a href="#RLE-plot-to-verify-normalization-methds-can-减轻batch-effect" class="headerlink" title="RLE plot to verify normalization methds can 减轻batch effect"></a>RLE plot to verify normalization methds can 减轻batch effect</h4><h3 id="Analysis-of-Unmapped-Reads"><a href="#Analysis-of-Unmapped-Reads" class="headerlink" title="Analysis of Unmapped Reads"></a>Analysis of Unmapped Reads</h3><h2 id="discussion"><a href="#discussion" class="headerlink" title="discussion"></a>discussion</h2><h3 id="evaluation-of-different-normalization-strategies"><a href="#evaluation-of-different-normalization-strategies" class="headerlink" title="evaluation of different normalization strategies"></a>evaluation of different normalization strategies</h3><h3 id="The-Necessity-of-Remove-Batch-Effect-After-Normalization"><a href="#The-Necessity-of-Remove-Batch-Effect-After-Normalization" class="headerlink" title="The Necessity of Remove Batch Effect After Normalization"></a>The Necessity of Remove Batch Effect After Normalization</h3><h3 id="The-Sequence-of-Filtering-Imputation-Normalization-and-Removing-Batch-Effect"><a href="#The-Sequence-of-Filtering-Imputation-Normalization-and-Removing-Batch-Effect" class="headerlink" title="The Sequence of Filtering, Imputation, Normalization, and Removing  Batch Effect"></a>The Sequence of Filtering, Imputation, Normalization, and Removing  Batch Effect</h3><h3 id="The-Origination-of-Unmapped-Reads"><a href="#The-Origination-of-Unmapped-Reads" class="headerlink" title="The Origination of Unmapped Reads"></a>The Origination of Unmapped Reads</h3><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2>]]></content>
+    <content type="html"><![CDATA[<h5 id="Abstract-测试置顶标签2"><a href="#Abstract-测试置顶标签2" class="headerlink" title="Abstract: 测试置顶标签2"></a>Abstract: 测试置顶标签2</h5><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><h2 id="this-is-subtitle"><a href="#this-is-subtitle" class="headerlink" title="this is subtitle"></a>this is subtitle</h2>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;exseek-g-4-workflow&quot;&gt;&lt;a href=&quot;#exseek-g-4-workflow&quot; class=&quot;headerlink&quot; title=&quot;exseek g.4 workflow&quot;&gt;&lt;/a&gt;exseek g.4 workflow&lt;/h1&gt;&lt;h2 id=&quot;methods&quot;&gt;&lt;a href=&quot;#methods&quot; class=&quot;headerlink&quot; title=&quot;methods&quot;&gt;&lt;/a&gt;methods&lt;/h2&gt;&lt;h3 id=&quot;构建原始表达矩阵&quot;&gt;&lt;a href=&quot;#构建原始表达矩阵&quot; class=&quot;headerlink&quot; title=&quot;构建原始表达矩阵&quot;&gt;&lt;/a&gt;构建原始表达矩阵&lt;/h3&gt;&lt;h4 id=&quot;quality-control（质量控制）&quot;&gt;&lt;a href=&quot;#quality-control（质量控制）&quot; class=&quot;headerlink&quot; title=&quot;quality control（质量控制）&quot;&gt;&lt;/a&gt;quality control（质量控制）&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;tool：fastqc&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h5 id=&quot;Abstract-测试置顶标签2&quot;&gt;&lt;a href=&quot;#Abstract-测试置顶标签2&quot; class=&quot;headerlink&quot; title=&quot;Abstract: 测试置顶标签2&quot;&gt;&lt;/a&gt;Abstract: 测试置顶标签2&lt;/h5&gt;
     
     </summary>
     
-      <category term="分类A" scheme="http://yoursite.com/categories/%E5%88%86%E7%B1%BBA/"/>
-    
-      <category term="分类B" scheme="http://yoursite.com/categories/%E5%88%86%E7%B1%BBA/%E5%88%86%E7%B1%BBB/"/>
-    
-      <category term="分类C" scheme="http://yoursite.com/categories/%E5%88%86%E7%B1%BBC/"/>
-    
-      <category term="分类D" scheme="http://yoursite.com/categories/%E5%88%86%E7%B1%BBC/%E5%88%86%E7%B1%BBD/"/>
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
     
     
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="top" scheme="http://yoursite.com/tags/top/"/>
     
   </entry>
   
