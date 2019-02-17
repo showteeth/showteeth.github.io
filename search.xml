@@ -5,8 +5,8 @@
     
     <entry>
       <title>test_templete</title>
-      <link href="/2019/02/17/hello-world/"/>
-      <url>/2019/02/17/hello-world/</url>
+      <link href="/posts/50abc09/"/>
+      <url>/posts/50abc09/</url>
       
         <content type="html"><![CDATA[<h5 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h5><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
       
@@ -30,8 +30,8 @@
     
     <entry>
       <title>test_templete</title>
-      <link href="/2019/02/16/test-templete/"/>
-      <url>/2019/02/16/test-templete/</url>
+      <link href="/posts/50abc09/"/>
+      <url>/posts/50abc09/</url>
       
         <content type="html"><![CDATA[<h5 id="Abstract-测试创建博客模板"><a href="#Abstract-测试创建博客模板" class="headerlink" title="Abstract: 测试创建博客模板"></a>Abstract: 测试创建博客模板</h5><a id="more"></a><h1 id="this-is-content"><a href="#this-is-content" class="headerlink" title="this is content"></a>this is content</h1><h2 id="this-is-sub-title"><a href="#this-is-sub-title" class="headerlink" title="this is sub title"></a>this is sub title</h2><p>“百度”二字，来自于八百年前南宋词人辛弃疾的一句词：众里寻他千百度。这句话描述了词人对理想的执着追求。1999年底，身在美国硅谷的李彦宏看到了中国互联网及中文搜索引擎服务的巨大发展潜力，抱着技术改变世界的梦想，他毅然辞掉硅谷的高薪工作，携搜索引擎专利技术，于 2000年1月1日在中关村创建了百度公司。</p>]]></content>
       
@@ -54,11 +54,11 @@
     
     
     <entry>
-      <title>test-top</title>
-      <link href="/2019/02/15/test-top/"/>
-      <url>/2019/02/15/test-top/</url>
+      <title>test-top2</title>
+      <link href="/posts/e711d5dc/"/>
+      <url>/posts/e711d5dc/</url>
       
-        <content type="html"><![CDATA[<h5 id="Abstract-测试置顶操作"><a href="#Abstract-测试置顶操作" class="headerlink" title="Abstract: 测试置顶操作"></a>Abstract: 测试置顶操作</h5><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><h2 id="this-is-subtitle"><a href="#this-is-subtitle" class="headerlink" title="this is subtitle"></a>this is subtitle</h2>]]></content>
+        <content type="html"><![CDATA[<h5 id="Abstract-测试置顶标签2"><a href="#Abstract-测试置顶标签2" class="headerlink" title="Abstract: 测试置顶标签2"></a>Abstract: 测试置顶标签2</h5><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><h2 id="this-is-subtitle"><a href="#this-is-subtitle" class="headerlink" title="this is subtitle"></a>this is subtitle</h2>]]></content>
       
       
       <categories>
@@ -79,11 +79,11 @@
     
     
     <entry>
-      <title>test-top2</title>
-      <link href="/2019/02/15/test-top2/"/>
-      <url>/2019/02/15/test-top2/</url>
+      <title>test-top</title>
+      <link href="/posts/a692ab1a/"/>
+      <url>/posts/a692ab1a/</url>
       
-        <content type="html"><![CDATA[<h5 id="Abstract-测试置顶标签2"><a href="#Abstract-测试置顶标签2" class="headerlink" title="Abstract: 测试置顶标签2"></a>Abstract: 测试置顶标签2</h5><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><h2 id="this-is-subtitle"><a href="#this-is-subtitle" class="headerlink" title="this is subtitle"></a>this is subtitle</h2>]]></content>
+        <content type="html"><![CDATA[<h5 id="Abstract-测试置顶操作"><a href="#Abstract-测试置顶操作" class="headerlink" title="Abstract: 测试置顶操作"></a>Abstract: 测试置顶操作</h5><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><h2 id="this-is-subtitle"><a href="#this-is-subtitle" class="headerlink" title="this is subtitle"></a>this is subtitle</h2>]]></content>
       
       
       <categories>
