@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-17T11:19:49.817Z</updated>
+  <updated>2019-02-17T14:01:51.613Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test_password</title>
+    <link href="http://yoursite.com/posts/30737.html"/>
+    <id>http://yoursite.com/posts/30737.html</id>
+    <published>2019-02-17T13:43:32.000Z</published>
+    <updated>2019-02-17T14:01:51.613Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h5><p>这是一篇用来测试加密文章的博客。</p><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><p>大豆又名大菽。一年生直立草本，高60-180cm。茎粗壮，密生褐色长硬毛。叶柄长，密生黄色长硬毛；托叶小，披针形；三出复叶，顶生小叶菱状卵形，长7-13cm，宽3-6cm，先端渐尖，基部宽楔形或圆形，两面均有白色长柔毛，侧生小叶较小，斜卵形；叶轴及小叶柄密生黄色长硬毛。总状花序腋生；苞片及小苞片披针形，有毛；花萼钟状，萼齿5，披针形，下面1齿最长，均密被白色长柔毛；花冠小，白色或淡紫色，稍较萼长；旗瓣先端微凹，翼瓣具1耳，龙骨瓣镰形；雄蕊10，二体；子房线形，被毛。荚果带状长圆形，略弯，下垂，黄绿色，密生黄色长硬毛。种子2-5颗，黄绿色或黑色，卵形至近球形，长约1cm。花期6-7月，果期8-10月。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract:&quot;&gt;&lt;/a&gt;Abstract:&lt;/h5&gt;&lt;p&gt;这是一篇用来测试加密文章的博客。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+    
+    
+      <category term="password" scheme="http://yoursite.com/tags/password/"/>
+    
+  </entry>
+  
+  <entry>
     <title>test_templete</title>
     <link href="http://yoursite.com/posts/29686.html"/>
     <id>http://yoursite.com/posts/29686.html</id>
     <published>2019-02-16T16:00:00.000Z</published>
-    <updated>2019-02-17T11:19:49.817Z</updated>
+    <updated>2019-02-17T13:42:32.214Z</updated>
     
-    <content type="html"><![CDATA[<h5 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h5><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" placeholder="请输入密码" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
     
     <summary type="html">
     
@@ -61,28 +83,6 @@
   </entry>
   
   <entry>
-    <title>test-top</title>
-    <link href="http://yoursite.com/posts/48109.html"/>
-    <id>http://yoursite.com/posts/48109.html</id>
-    <published>2019-02-14T16:00:00.000Z</published>
-    <updated>2019-02-17T11:19:49.823Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="Abstract-测试置顶操作"><a href="#Abstract-测试置顶操作" class="headerlink" title="Abstract: 测试置顶操作"></a>Abstract: 测试置顶操作</h5><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><h2 id="this-is-subtitle"><a href="#this-is-subtitle" class="headerlink" title="this is subtitle"></a>this is subtitle</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;Abstract-测试置顶操作&quot;&gt;&lt;a href=&quot;#Abstract-测试置顶操作&quot; class=&quot;headerlink&quot; title=&quot;Abstract: 测试置顶操作&quot;&gt;&lt;/a&gt;Abstract: 测试置顶操作&lt;/h5&gt;
-    
-    </summary>
-    
-      <category term="test" scheme="http://yoursite.com/categories/test/"/>
-    
-    
-      <category term="top" scheme="http://yoursite.com/tags/top/"/>
-    
-  </entry>
-  
-  <entry>
     <title>test-top2</title>
     <link href="http://yoursite.com/posts/39162.html"/>
     <id>http://yoursite.com/posts/39162.html</id>
@@ -94,6 +94,28 @@
     <summary type="html">
     
       &lt;h5 id=&quot;Abstract-测试置顶标签2&quot;&gt;&lt;a href=&quot;#Abstract-测试置顶标签2&quot; class=&quot;headerlink&quot; title=&quot;Abstract: 测试置顶标签2&quot;&gt;&lt;/a&gt;Abstract: 测试置顶标签2&lt;/h5&gt;
+    
+    </summary>
+    
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+    
+    
+      <category term="top" scheme="http://yoursite.com/tags/top/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test-top</title>
+    <link href="http://yoursite.com/posts/48109.html"/>
+    <id>http://yoursite.com/posts/48109.html</id>
+    <published>2019-02-14T16:00:00.000Z</published>
+    <updated>2019-02-17T11:19:49.823Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="Abstract-测试置顶操作"><a href="#Abstract-测试置顶操作" class="headerlink" title="Abstract: 测试置顶操作"></a>Abstract: 测试置顶操作</h5><a id="more"></a><h1 id="this-is-title"><a href="#this-is-title" class="headerlink" title="this is title"></a>this is title</h1><h2 id="this-is-subtitle"><a href="#this-is-subtitle" class="headerlink" title="this is subtitle"></a>this is subtitle</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;Abstract-测试置顶操作&quot;&gt;&lt;a href=&quot;#Abstract-测试置顶操作&quot; class=&quot;headerlink&quot; title=&quot;Abstract: 测试置顶操作&quot;&gt;&lt;/a&gt;Abstract: 测试置顶操作&lt;/h5&gt;
     
     </summary>
     
