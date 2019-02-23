@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://showteeth.tech/"/>
-  <updated>2019-02-23T07:52:42.781Z</updated>
+  <updated>2019-02-23T13:36:17.224Z</updated>
   <id>http://showteeth.tech/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>其他想学习的内容</title>
+    <link href="http://showteeth.tech/posts/49862.html"/>
+    <id>http://showteeth.tech/posts/49862.html</id>
+    <published>2019-02-23T12:17:33.000Z</published>
+    <updated>2019-02-23T13:36:17.224Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note info"><p>其他想学习的内容汇总，包括Latex排版、git使用、readthedocs+mkdocs静态网站、markdown学习、docker学习以及snakemake等内容，如果遇到后续会持续添加。</p></div><a id="more"></a><h2 id="markdown学习"><a href="#markdown学习" class="headerlink" title="markdown学习"></a>markdown学习</h2><p>&emsp;&emsp;在后面的学习中，我将尽可能使用markdown进行文档的编写，这样看着更加美观，所以有必要对齐进行完善的学习，同时在真正的语法与在博客中遇到的可能有所差别，所以这里的将主要关注一些基础的语法，其他在博客写作中常用的可以参考之前写的博客。</p><div><br><a class="btn" href="http://showteeth.tech/posts/37746.html"><i class="fa fa-telegram fa-lg fa-fw"></i>next-markdown技巧和模板</a><br></div><div><br><a class="btn" href="http://showteeth.tech/"><i class="fa fa-telegram fa-lg fa-fw"></i>markdown基础语法学习</a><br></div><hr><p><br></p><h2 id="git使用"><a href="#git使用" class="headerlink" title="git使用"></a>git使用</h2><p>&emsp;&emsp;接触到github之后，git操作是经常需要使用的，所以对其进行学习非常有必要。</p><div><br><a class="btn" href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>Git教程-廖雪峰</a><br></div><div><br><a class="btn" href="http://iissnan.com/progit/" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>Pro Git</a><br></div><hr><p><br></p><h2 id="Latex排版"><a href="#Latex排版" class="headerlink" title="Latex排版"></a>Latex排版</h2><p>&emsp;&emsp;第一次真正见识到latex是看到清本大佬使用latex对课程<mark>论文进行排版</mark>以及<mark>数学公式编写</mark>，觉得非常牛逼，同时也反思了自己的本科经历，果然大佬就是大佬！啥也不说了学习吧。</p><div><br><a class="btn" href="https://liam.page/2014/09/08/latex-introduction/" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>一份其实很短的 LaTeX 入门文档</a><br></div><div><br><a class="btn" href="http://liyangbit.com/math/jupyter-latex/" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>Markdown中输入数学公式及LaTex常用数学符号整理</a><br></div><div><br><a class="btn" href="http://showteeth.tech/"><i class="fa fa-telegram fa-lg fa-fw"></i>刘海洋-latex入门</a><br></div><hr><p><br></p><h2 id="readthedocs-mkdocs静态网站"><a href="#readthedocs-mkdocs静态网站" class="headerlink" title="readthedocs+mkdocs静态网站"></a>readthedocs+mkdocs静态网站</h2><p>&emsp;&emsp;在binbin师兄的带领下，也算是接触了一下readthedocs+mkdocs静态网站（写技术文档），感觉也挺好看的，可以用来展示自己使用markdown编写的一些文本，主要是指项目。</p><div><br><a class="btn" href="https://www.mkdocs.org/" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>mkdocs的官方网站</a><br></div><hr><h3 id="好用的参考"><a href="#好用的参考" class="headerlink" title="好用的参考"></a>好用的参考</h3><div class="note info"><ul><li><a href="https://cyent.github.io/markdown-with-mkdocs-material/" target="_blank" rel="noopener">很好的教程</a></li><li><a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/" target="_blank" rel="noopener">mkdocs可用的拓展</a></li></ul></div><hr><p><br></p><h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2><p>&emsp;&emsp;docker是开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p><div><br><a class="btn" href="https://yeasy.gitbooks.io/docker_practice/content/" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>Docker——从入门到实践</a><br></div><div><br><a class="btn" href="https://adoubi.life/posts/2017-8-19/" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>docker学习笔记</a><br></div><hr><p><br></p><h2 id="snakemake"><a href="#snakemake" class="headerlink" title="snakemake"></a>snakemake</h2><p>&emsp;&emsp;snakemake是用来编写任务流程的工具。</p><div><br><a class="btn" href="https://www.jianshu.com/p/14b9eccc0c0e" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>snakemake使用笔记</a><br></div><div><br><a class="btn" href="https://slowkow.com/notes/snakemake-tutorial/" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>snakemake-tutorial</a><br></div><div><br><a class="btn" href="https://www.jianshu.com/p/8e57fd2b81b2" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>使用Snakemake搭建分析流程</a><br></div><div><br><a class="btn" href="https://www.jianshu.com/p/14b9eccc0c0e" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg fa-fw"></i>实例-binbin师兄写的</a><br></div><p><br></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note info&quot;&gt;&lt;p&gt;其他想学习的内容汇总，包括Latex排版、git使用、readthedocs+mkdocs静态网站、markdown学习、docker学习以及snakemake等内容，如果遇到后续会持续添加。&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="规划" scheme="http://showteeth.tech/categories/%E8%A7%84%E5%88%92/"/>
+    
+      <category term="其他内容学习" scheme="http://showteeth.tech/categories/%E8%A7%84%E5%88%92/%E5%85%B6%E4%BB%96%E5%86%85%E5%AE%B9%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习计划" scheme="http://showteeth.tech/tags/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+    
+      <category term="其他内容学习" scheme="http://showteeth.tech/tags/%E5%85%B6%E4%BB%96%E5%86%85%E5%AE%B9%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习学习计划</title>
