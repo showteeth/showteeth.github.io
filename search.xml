@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[diff-比较文件差异]]></title>
+    <url>%2Fposts%2F56778.html</url>
+    <content type="text"><![CDATA[这里写摘要，显示更好看diff简介这个和前面讲到的comm命令和cmp命令的不同之处在于：diff命令用法diff命令格式12diff options说明参考链接实例较多举例说明Linux diff 命令参数讲解清晰的讲解文件比较 cmp，diff，patch]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>常用基本命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[cmp-比较文件差异]]></title>
+    <url>%2Fposts%2F62860.html</url>
+    <content type="text"><![CDATA[这里写摘要，显示更好看cmp简介cmp命令用于比较两个文件是否有差异；当相互比较的两个文件完全一样时，则该命令不会有输出结果；若发现有所差异，默认会标示出第一个不同之处的字符和列数编号若不指定任何文件名称或是所给予的文件名为-，则cmp指令会从标准输入读取数据这个和前面讲到的comm命令的不同之处在于：comm命令对已排序的文件进行比较并将结果分为3列，便于提取文件比较的结果，如得到两个文件的差集、交集、并集和对称差集等，而cmp命令侧重于比较两个文件差异，大多用于比较同一个文件修改之后和修改之前的差异，并且cmp比较文件不需要进行排序。cmp命令用法cmp命令格式12345Usage: cmp [OPTION] FILE1 [FILE2 [SKIP1 [SKIP2]]]# The optional SKIP1 and SKIP2 specify the number of bytes to skip# at the beginning of each file (zero by default).Compare two files byte by bytecmp options说明table th:first-of-type{width:15%}table th:nth-of-type(2){width:25%}table th:nth-of-type(3){width:60%}参考链接cmp命令Linux cmp命令文件比较 cmp，diff，patchLinux初学者的cmp命令教程（7个例子）]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>常用基本命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[journey]]></title>
+    <url>%2Fposts%2F34270.html</url>
+    <content type="text"><![CDATA[这里写摘要，显示更好看景点磁器口吃的：陈麻花-推荐陈昌银或者夏麻花、张老汉手工酸辣粉（磁器口必吃之一）有很多文艺的小咖啡馆或者书店磁器口的主街人满为患，商业化严重，更建议去侧街，也是咖啡馆一条街，客量少，店面装饰都很有文艺味儿，是来磁器口的正确打开方式。（在此安利一家咖啡馆——懒鱼时光馆，上图即是该咖啡馆，是一家有故事的咖啡馆）洪崖洞晚上去，白天不好看，晚上有灯光主要是建筑构造和风貌南山一棵树观景台可以将重庆所有的美景尽收眼底！建议夜晚去，重庆的夜景很美很美很美！门票：门票30，学生证15吃的：泉水鸡、枇杷园（火锅）十八梯电影《从你的全世界路过》十八梯是重庆渝中半岛的一条街，从重庆城的上半城（山顶）通到下半城（山脚），全部由石阶铺成，把山顶的繁华商业区和山下江边的老城区连起来。拆迁了朝天门两江游重庆很出名的两江交汇：长江与嘉陵江夜景长江索道到达对岸后不用着急回来可以在那边拍拍照，然后再返回来皇冠大扶梯亚洲第二长的一级提升坡地大扶梯这个扶梯不用刻意去，如果方便可以去坐坐，其实就是一个长长的扶梯，但是因为有坡度而且特别长所以很炫酷！中山四路历史遗迹很多，除了中国民主党派博物馆的特园外，此地还有桂园、周公馆、戴公馆、张骧公馆、国民政府总统府旧址等解放碑解放碑是重庆的标志，特别是圣诞节和跨年的时候，大家会不约而同地去解放碑一同度过！场面壮观到每年都会提前进行封路。解放碑那有一条好吃街，可以去吃吃～李串串两江影视城民国街再现了百年老重庆风土人情影视城里重现了当时的解放碑、磁器口、朝天门、十八梯，特别有意思当地也可以租民国服装小吃重庆小面重庆火锅大龙火锅。以超辣闻名，吃这家店的人超级多，中午都得排很久的队串串串串推荐小郡肝、李记、怒火八零等等酸辣粉/凉粉/冰粉凉虾/凉糕莱得快的杂酱酸辣粉阿坤的杂酱酸辣粉、苕皮、海带，有点辣。但是阿坤里面有甜品所以可以也点一份甜品，防止被辣着，推荐它们的双皮奶。好又来酸辣粉（口碑店家）、手工酸辣粉（视觉和味觉两不误）、麻辣鱼/酸菜鱼/尖椒兔大渡口，店名是：霸王兔夜啤酒/万州烤鱼/烧烤奶制品重庆本土的天友，以及后发的奶牛梦工厂参考路线两天]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>旅游</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[comm-文件比较，文本文件的交集、差集与求差]]></title>
+    <url>%2Fposts%2F39582.html</url>
+    <content type="text"><![CDATA[对两个文件内容进行比较，注意文件需要排序，相比于其他比较文件的命令，comm可以将文件内容不同的分列显示，便于提取(文件求交、并、差、对称差等)所需要的内容，另外两个文件比较命令包括cmp、diffcomm用法comm命令会一行行(line by line)地比较两个已排序文件的差异，并将其结果显示出来，如果没有指定任何参数，则会把结果分成3行显示：第1行仅是在第1个文件中出现过的列第2行是仅在第2个文件中出现过的列第3行则是在第1与第2个文件里都出现过的列。若给予的文件名称为-，则comm命令会从标准输入设备读取数据comm命令格式12Usage: comm [OPTION] FILE1 FILE2comm options说明table th:first-of-type{width:20%}table th:nth-of-type(2){width:80%}参数说明-1不显示第1列（即不显示只在file1中找到的行）-2不显示第2列（即不显示只在file2中找到的行）-3不显示第3列（即不显示在两个文件中都找到的行）–check-order判断所有输入文件是不是已经排好序–nocheck-order不判断所有输入文件是不是已经排好序–output-delimiter=STR指定输出结果的分隔符comm用法实例测试文件cat a.txtaaabbbccc111dddeee222cat b.txtbbbcccaaahhhtttjjj注意上面两个文件都没有排序，看看comm对没排序文件的处理使用默认方式对文本进行比较comm a.txt b.txtaaabbbccccomm: file 1 is not in sorted ordercomm: file 2 is not in sorted order111aaadddeee222hhhtttjjj从上面可以看出，没排序comm命令会爆出问题，但是仍然会运行得到结果；发现因为没有排序的原因，第二个文件的aaa在第一个文件中也存在但是却被当成了file2独有的。总的来说就是如果没排序，comm命令会爆出问题但不会停止运行，并且结果会存在问题，正常结果如下：sort -k 1,1 a.txt |comm - &lt;(sort -k 1,1 b.txt)111222aaabbbcccdddeeehhhjjjttt可以看出默认情况会输出三列，第一列是第一个文件独有的内容，第二列是第二个文件独有的内容，第三列是第三个文件独有的内容，各列是以制表符\t作为定界符，可以通过对定界符-制表符\t的操作来达到相应的目的。由于参数较为简单，这里就不单独列出每个参数单独的用法的示例，主要给出参数组合用法以及和定界符组合使用的示例如下：集合操作含义及对应的参数组合A∩B文件交集，-12A∪B文件的并集，将输出整合为一列，去掉定界符\tA-B差集，-23B-A差集，-13A∆B对称差集，并集减去交集，也就是去除文件中相同的部分，需要使用-3以及将剩下两列整合为一列A∩B-文件交集A∪B-文件的并集A-B-差集B-A-差集A∆B-对称差集多列文件的处理参考链接comm命令Linux comm命令简明Linux命令行笔记：comm]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>常用基本命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[anaconda同时安装python2和python3]]></title>
+    <url>%2Fposts%2F34297.html</url>
+    <content type="text"><![CDATA[这里写摘要，显示更好看前言原本是通过anaconda给电脑安装的python3，但是今天在从github上下载使用一个package时候报错：SyntaxError: Missing parentheses in call to ‘print’. Did you mean print(‘File does not exist: %s’ % filepath)?后来发现这个是因为python版本的问题，所以就需要重新再安装一个python2的环境创建环境这个本来可以使用简单地打开anaconda navigator图形界面进行creat环境即可，但是秉承着想对anaconda进行学习的态度，这里主要使用命令行的形式。显示所有环境名字和路径创建新环境之前先看看目前的电脑有哪些环境：1conda info --envs# conda environments:#base * C:\Users\14910\Anaconda3rstudio C:\Users\14910\Anaconda3\envs\rstudio发现电脑只有一个原装的base环境，也就是python3的环境以及我自己安装的rstudio环境，同时需要注意上面的*表明是当前使用的环境！创建环境并指定环境名称和python版本这一步是使用conda create创建环境，同时指定环境的名称为pyenv2_7，使用的python版本为python=2.7：1conda create --name pyenv2_7 python=2.7再次显示所有环境名字和路径创建新环境再次查看现在所有的环境名称和对应的路径：1conda info --envs发现已经出现了新建的环境：# conda environments:#base * C:\Users\14910\Anaconda3pyenv2_7 C:\Users\14910\Anaconda3\envs\pyenv2_7rstudio C:\Users\14910\Anaconda3\envs\rstudio由于只是创建了环境，还没有激活，所以当前使用的环境(*标记的)还是base环境，新建的环境需要激活才能够使用激活环境为了能够使用新创建的环境还需要激活：1activate pyenv2_7为了验证环境是不是已经成功应用，检查python版本：python –versionPython 2.7.15 :: Anaconda, Inc.发现环境已经安装成功退出环境：使用完成之后推出新建的环境，回到base环境：1conda deactivate注意conda deactivate后面不需要跟退出的环境名，直接就退出当前环境，退出环境之后直接就进入了base环境。参考链接ananconda创建新环境，python 2.7、3.5共存，pycharm 使用conda新环境，win10、linux下通用利用Anaconda完美解决Python 2与python 3的共存问题]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用Travis CI自动部署github项目]]></title>
     <url>%2Fposts%2F62916.html</url>
     <content type="text"><![CDATA[linux系统，换电脑之后再写！开始于二级标题参考链接Travis CI 自动化部署博客持续集成服务 Travis CI 教程Travis CI用来持续集成你的项目使用travis-ci自动部署github上的项目]]></content>
@@ -91,7 +146,7 @@
   <entry>
     <title><![CDATA[cut-按列切分文件字段工具]]></title>
     <url>%2Fposts%2F64687.html</url>
-    <content type="text"><![CDATA[本文主要学习了Linux下对每一行文本按照给定的分隔符进行切割并按照指定的范围提取字段、字符或字节的命令cut，其主要选项包括：-d、-f、--complement、-s、-c、-b、-n和--output-delimiter。cut用法cut命令从文件的每一行剪切字节、字符或字段并将这些字节、字符或字段写至标准输出如果不指定文件，cut命令将读取标准输入cut命令格式12Usage: cut OPTION [FILE]cut options说明table th:first-of-type{width:15%}table th:nth-of-type(2){width:25%}table th:nth-of-type(3){width:60%}参数完整参数说明-b–bytes=LIST以字节为单位进行分割，这些字节位置将忽略多字节字符边界，除非也指定了-n标志-c–characters=LIST以字符为单位进行分割-d–delimiter=DELIM自定义分隔符，默认为制表符tab-f–fields=LIST与-d一同使用，显示指定字段的内容；也会打印不包含分隔符的行，除非指定了-s参数-nwith -b: 取消分割多字节字符，仅和 -b 标志一起使用；如果字符的最后一个字节落在由 -b 标志的 List 参数指示的范围之内，该字符将被写出，否则该字符将被排除–complement补足被选择的字节、字符或字段-s–only-delimited不打印没有包含分隔符的行，有利于去掉注释和标题–output-delimiter=STRING指定输出内容是的分隔符cut指定字段、字符或字节范围的方法指定字段、字符或字节范围有以下三种方法：N-：获取连续范围，从第N个字节、字符、字段到结尾；N-M：获取连续范围，从第N个字节、字符、字段到第M个（包括M在内）字节、字符、字段；-M：获取连续范围，从第1个字节、字符、字段到第M个（包括M在内）字节、字符、字段N,M：获取不连续范围，得到第N个字节、字符、字段和第M个字节、字符、字段N,M,Z-P：获取连续范围和不连续范围，第N个字节、字符、字段、第M个字节、字符、字段以及从第Z个字节、字符、字段到第P个（包括P在内）字节、字符、字段逗号(,)可以使用多个cut用法实例测试数据cat cut.txtNo Name Mark Percent01 tom 69 9102 jack 71 8703 alex 68 98-d 自定义分隔符默认-d是制表符tab，这个很关键，不是空白字符，同时自定义的分隔符必须是单个的字符，比如单个的空格，不能是两个或以上空格cut -d &#39; &#39; -f 1 cut.txtNo010203awk &#39;{print $1&quot;;&quot;$2&quot;;&quot;$3&quot;;&quot;$4}&#39; cut.txt |cut -d &#39;;&#39; -f 1No010203-f 提取指定字段内容选取单个filed如上面-d用法示例选取多个字段，直接将多个字段在-f选项后使用,分割即可：cut -d &#39; &#39; -f 1,3 cut.txtNo Mark01 6902 7103 68也可以使用-和,混用的方法：cut -d &#39; &#39; -f 1,3-4 cut.txtNo Mark Percent01 69 9102 71 8703 68 98–complement 提取指定字段之外的内容cut -d &#39; &#39; -f 1,3 --complement cut.txtName Percenttom 91jack 87alex 98这里得到的结果和上面单纯使用-f得到的结果可以说是互补的，因为--complement是提取指定字段之外的内容-s 不打印没有包含分隔符的行在cut.txt上增加一行文本，其分隔符和其他几行不同：cat cut.txt#this-is-testNo Name Mark Percent01 tom 69 9102 jack 71 8703 alex 68 98默认情况，如果一行不包含分隔符，就会输出这一行：cut -d ‘ ‘ -f 1 cut.txt#this-is-testNo010203为了防止上述情形出现，可以使用-s选项：cut -d &#39; &#39; -s -f 1 cut.txtNo010203可以发现，不包含空格作为分隔符的第一行就没有进行输出-c 提取指定字符范围的内容cat cut2.txtabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz指定连续范围：cut -c -2 cut2.txtabababababcut -c 5- cut2.txtefghijklmnopqrstuvwxyzefghijklmnopqrstuvwxyzefghijklmnopqrstuvwxyzefghijklmnopqrstuvwxyzefghijklmnopqrstuvwxyz指定不连续范围和连续范围（,和-混用）：cut -c 1,3-5 cut2.txtacdeacdeacdeacdeacde-b 提取指定字符范围的内容cut -b 1-5 cut2.txtabcdeabcdeabcdeabcdeabcde这结果咋一看和前面的-c没有什么区别，这是因为操作对象都是英文字母，而在ASCII码和UTF-8编码中英文字母的字节和字符是相等的，具体的字节和字符的区别见这篇博客由于我使用的vscode的默认编码方式为utf-8，所以英文字母的字节和字符是相等的，而中文1个中文（含繁体） = 3个字节，为了凸显-b和-c的区别，下面采用中文进行测试：cat cut3.txt星期一星期二星期三星期四星期五cut -b 1-3 cut3.txt # cut -b 1-2 cut3.txt结果为空，因为需要三个字节才可以星星星星星cut -c 1-3 cut3.txt星期一星期二星期三星期四星期五针对英文字符进行提取指定字符范围内容时，-b和-c选项没什么差别，因为在大部分编码方式中，英文字母的字节和字符是相等的，而针对中文就需要注意不同的编码方式对中文字符对应字节数的设置，当然cut命令还提供了了一个选项-n来解决上述-b可能遇到的问题-n 取消分割多字节字符该选项仅和 -b 选项一起使用，用来取消分割多字节字符cut -b 3 cut3.txtcut -nb 3 cut3.txt星星星星星cut -nb 3,6,9 cut3.txt星期一星期二星期三星期四星期五当-nb后面的数字为3的整数倍（utf-8编码）时就不会分割多字节字符，得到对应的字符，不过感觉这没啥大用处，一般都直接使用了-c参数来获取字符–output-delimiter=STRING 指定输出内容是的分隔符cut -d &#39; &#39; -f 1-3 --output-delimiter=$&#39;\t&#39; cut.txt#this-is-testNo Name Mark01 tom 6902 jack 7103 alex 68注意这里指定输出分割符为tab的时候使用了$&#39;\t&#39;的方式，其中$和单引号都是必须的不能更改的，这个和join命令中指定分隔符的用法相同，具体原因查看这篇文章参考链接cut命令linux的cut命令Linux下的cut选取命令详解linux每日一命令–cut]]></content>
+    <content type="text"><![CDATA[本文主要学习了Linux下对每一行文本按照给定的分隔符进行切割并按照指定的范围提取字段、字符或字节的命令cut，其主要选项包括：-d、-f、--complement、-s、-c、-b、-n和--output-delimiter。cut用法cut命令从文件的每一行剪切字节、字符或字段并将这些字节、字符或字段写至标准输出如果不指定文件，cut命令将读取标准输入cut命令格式12Usage: cut OPTION [FILE]cut options说明table th:first-of-type{width:15%}table th:nth-of-type(2){width:25%}table th:nth-of-type(3){width:60%}参数完整参数说明-b–bytes=LIST以字节为单位进行分割，这些字节位置将忽略多字节字符边界，除非也指定了-n标志-c–characters=LIST以字符为单位进行分割-d–delimiter=DELIM自定义分隔符，默认为制表符tab-f–fields=LIST与-d一同使用，显示指定字段的内容；也会打印不包含分隔符的行，除非指定了-s参数-nwith -b: 取消分割多字节字符，仅和 -b 标志一起使用；如果字符的最后一个字节落在由 -b 标志的 List 参数指示的范围之内，该字符将被写出，否则该字符将被排除–complement补足被选择的字节、字符或字段-s–only-delimited不打印没有包含分隔符的行，有利于去掉注释和标题–output-delimiter=STRING指定输出内容的分隔符cut指定字段、字符或字节范围的方法指定字段、字符或字节范围有以下三种方法：N-：获取连续范围，从第N个字节、字符、字段到结尾；N-M：获取连续范围，从第N个字节、字符、字段到第M个（包括M在内）字节、字符、字段；-M：获取连续范围，从第1个字节、字符、字段到第M个（包括M在内）字节、字符、字段N,M：获取不连续范围，得到第N个字节、字符、字段和第M个字节、字符、字段N,M,Z-P：获取连续范围和不连续范围，第N个字节、字符、字段、第M个字节、字符、字段以及从第Z个字节、字符、字段到第P个（包括P在内）字节、字符、字段逗号(,)可以使用多个cut用法实例测试数据cat cut.txtNo Name Mark Percent01 tom 69 9102 jack 71 8703 alex 68 98-d 自定义分隔符默认-d是制表符tab，这个很关键，不是空白字符，同时自定义的分隔符必须是单个的字符，比如单个的空格，不能是两个或以上空格cut -d &#39; &#39; -f 1 cut.txtNo010203awk &#39;{print $1&quot;;&quot;$2&quot;;&quot;$3&quot;;&quot;$4}&#39; cut.txt |cut -d &#39;;&#39; -f 1No010203-f 提取指定字段内容选取单个filed如上面-d用法示例选取多个字段，直接将多个字段在-f选项后使用,分割即可：cut -d &#39; &#39; -f 1,3 cut.txtNo Mark01 6902 7103 68也可以使用-和,混用的方法：cut -d &#39; &#39; -f 1,3-4 cut.txtNo Mark Percent01 69 9102 71 8703 68 98–complement 提取指定字段之外的内容cut -d &#39; &#39; -f 1,3 --complement cut.txtName Percenttom 91jack 87alex 98这里得到的结果和上面单纯使用-f得到的结果可以说是互补的，因为--complement是提取指定字段之外的内容-s 不打印没有包含分隔符的行在cut.txt上增加一行文本，其分隔符和其他几行不同：cat cut.txt#this-is-testNo Name Mark Percent01 tom 69 9102 jack 71 8703 alex 68 98默认情况，如果一行不包含分隔符，就会输出这一行：cut -d ‘ ‘ -f 1 cut.txt#this-is-testNo010203为了防止上述情形出现，可以使用-s选项：cut -d &#39; &#39; -s -f 1 cut.txtNo010203可以发现，不包含空格作为分隔符的第一行就没有进行输出-c 提取指定字符范围的内容cat cut2.txtabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz指定连续范围：cut -c -2 cut2.txtabababababcut -c 5- cut2.txtefghijklmnopqrstuvwxyzefghijklmnopqrstuvwxyzefghijklmnopqrstuvwxyzefghijklmnopqrstuvwxyzefghijklmnopqrstuvwxyz指定不连续范围和连续范围（,和-混用）：cut -c 1,3-5 cut2.txtacdeacdeacdeacdeacde-b 提取指定字符范围的内容cut -b 1-5 cut2.txtabcdeabcdeabcdeabcdeabcde这结果咋一看和前面的-c没有什么区别，这是因为操作对象都是英文字母，而在ASCII码和UTF-8编码中英文字母的字节和字符是相等的，具体的字节和字符的区别见这篇博客由于我使用的vscode的默认编码方式为utf-8，所以英文字母的字节和字符是相等的，而中文1个中文（含繁体） = 3个字节，为了凸显-b和-c的区别，下面采用中文进行测试：cat cut3.txt星期一星期二星期三星期四星期五cut -b 1-3 cut3.txt # cut -b 1-2 cut3.txt结果为空，因为需要三个字节才可以星星星星星cut -c 1-3 cut3.txt星期一星期二星期三星期四星期五针对英文字符进行提取指定字符范围内容时，-b和-c选项没什么差别，因为在大部分编码方式中，英文字母的字节和字符是相等的，而针对中文就需要注意不同的编码方式对中文字符对应字节数的设置，当然cut命令还提供了了一个选项-n来解决上述-b可能遇到的问题-n 取消分割多字节字符该选项仅和 -b 选项一起使用，用来取消分割多字节字符cut -b 3 cut3.txtcut -nb 3 cut3.txt星星星星星cut -nb 3,6,9 cut3.txt星期一星期二星期三星期四星期五当-nb后面的数字为3的整数倍（utf-8编码）时就不会分割多字节字符，得到对应的字符，不过感觉这没啥大用处，一般都直接使用了-c参数来获取字符–output-delimiter=STRING 指定输出内容是的分隔符cut -d &#39; &#39; -f 1-3 --output-delimiter=$&#39;\t&#39; cut.txt#this-is-testNo Name Mark01 tom 6902 jack 7103 alex 68注意这里指定输出分割符为tab的时候使用了$&#39;\t&#39;的方式，其中$和单引号都是必须的不能更改的，这个和join命令中指定分隔符的用法相同，具体原因查看这篇文章参考链接cut命令linux的cut命令Linux下的cut选取命令详解linux每日一命令–cut]]></content>
       <categories>
         <category>Linux</category>
       </categories>
