@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[cat-显示、读取或拼接文件内容]]></title>
+    <url>%2Fposts%2F24399.html</url>
+    <content type="text"><![CDATA[这篇文章主要学习了Linux的cat命令，主要包括cat简介cat 是一个文本文件(查看)和(连接)工具，通常是用于查看某个文件的内容，其主要有三大功能：显示整个文件内容将几个文件合并为一个文件从键盘创建一个文件cat命令用法cat命令格式1234Usage: cat [OPTION]... [FILE]...Description: Concatenate FILE(s), or standard input, to standard output.cat options说明table th:first-of-type{width:15%}table th:nth-of-type(2){width:25%}table th:nth-of-type(3){width:60%}参数完整参数说明-n–number由1开始对所有输出的行数编号-b–number-nonblank和-n相似，只不过对于空白行不编号-s–squeeze-blank当遇到有连续两行以上的空白行，只输出一行的空白行-E–show-ends在每行结束处显示$-v–show-nonprinting使用^和M-符号，除了LFD和TAB之外-T–show-tabs将TAB字符显示为^I-A–show-all等价于 -vET-e等价于-vE选项-t等价于-vT选项cat用法实例测试文件cat test1.txtab 1\====cat test2.txtcd\==查看文件功能-n-对所有行编号所有行包含空白行：cat -n test1.txt1 a2 b 1345 ====-b-对除空白行之外的行进行编号cat -b test1.txt1 a2 b 13 ==== 需要和上面的-n参数进行区分-s-只输出连续多行空白行的其中一行结合前面的-n参数：cat -sn test1.txt1 a2 b 134 ====可以发现只输出了连续两行空白行中的一个，并进行编号，说明是先输出一个，然后编号的，不是先编号再输出其中一行-E-在每行结束处显示$cat -E test1.txta \$b 1\$\$\$====\$-T-将TAB字符显示为^Icat -nT test1.txt1 a2 b ^I1345 ====合并文件功能将test1.txt和test2.txt合并后重定向到test3.txt中：cat test1.txt test2.txt &gt;test3.txtcat test3.txtab 1\====cd\==可以结合前面查看文件的参数：cat -n test1.txt test2.txt1 a2 b 1345 ====6 c7 d8 ==后面不接文件的话会输出到标准输出文件内容是按照文件顺序连接起来的编号是连续的，不是每个文件单独的编号创建文件相关功能这一部分主要有三个比较重要和常见的命令：cat &lt;&lt; EOFcat &gt; filenamecat &gt; filename &lt;&lt; EOF`cat &lt;&lt; EOF以EOF输入字符为标准输入结束，这里的EOF并不是固定的(EOF是end of file，表示文本结束符，使用有含义的字符可能更容易记住用法)，可以设置为mmm等其他自定义的字符，示例如下：1234567891011121314cat &lt;&lt; EOF &gt; ad # 开始从标准输入读取&gt; adad&gt; EOF # 遇到了标准输入结束字符，结束标准输入 ad # 直接输出adad# 更换标准输入结束字符cat &lt;&lt; mmm&gt; ad&gt; ad&gt; mmm # 遇到了上面定义的标准输入结束字符，结束标准输入 adad这一部分输入输入和输出重定向部分，还可以参考这篇文章cat &gt; filename创建文件，并把标准输入输出到filename文件中，以ctrl+d作为输入结束:123456789# 创建文件并写入cat &gt; filenameadadad # 这一行输入完成之后按下快捷键ctrl+d结束输入# 查看文件内容cat filename adadadcat &gt; filename命令和上面的cat &lt;&lt; EOF不同之处在于：cat &lt;&lt; EOF不会创建文件，而cat &gt; filename会创建文件cat &lt;&lt; EOF可以自定义结束的字符，而cat &gt; filename则是使用快捷键ctrl+d作为输入结束cat &lt;&lt; EOF输入的时候有&gt;提示输入，而cat &gt; filename没有任何提示输入的此内容cat &gt; filename &lt;&lt; EOF这个是上面两个的合并版，既可以创建文件，又可以自定义停止输入字符：1234567891011121314# 创建文件并设置停止输入字符cat &gt; test4.txt &lt;&lt; EOF&gt; a&gt; b&gt; c&gt; d&gt; EOF # 遇到了标准输入结束字符，结束标准输入，但是不会直接输入，因为内容已经重定向到test4.txt中# 查看test4.txt文件内容，是刚刚输入的内容cat test4.txt abcd上面的创建文件也可以改为追加文件：cat &gt;&gt; test4.txt &lt;&lt; EOFcat &gt; filename &lt;&lt; EOF书写的前后顺序可以调换，比如可写成：cat &lt;&lt; EOF &gt; filename参考链接cat命令Linux cat命令Linux cat命令详解Linux中cat、more、less、tail、head命令的区别]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用基本命令</category>
+      </categories>
+      <tags>
+        <tag>常用基本命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Git系列-Git实战总结]]></title>
     <url>%2Fposts%2F5778.html</url>
     <content type="text"><![CDATA[这篇文章主要记录了在使用Git中遇到的比较使用的技巧和问题解决方案，便于后续查询和使用。.gitignore文件不起作用以及文件规则文件书写规则在使用Git管理代码的过程中，可以修改.gitignore文件中的标示的方法来忽略开发者想忽略掉的文件或目录(实际项目中，很多文件都是不需要版本管理的)，如果没有.gitignore文件，可以自己手工创建。在.gitignore文件中的每一行保存一个匹配的规则例如：1234567# 此为注释 – 将被 Git 忽略 *.a # 忽略所有 .a 结尾的文件!lib.a # 但 lib.a 除外/TODO # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODObuild/ # 忽略 build/ 目录下的所有文件doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt需要强调的一点是，如果你不慎在创建.gitignore文件之前就push了项目，那么即使你在.gitignore文件中写入新的过滤规则，这些规则也不会起作用，Git仍然会对所有文件进行版本管理。简单来说，出现这种问题的原因就是Git已经开始管理这些文件了，所以你无法再通过过滤规则过滤它们。所以大家一定要养成在项目开始就创建.gitignore文件的习惯，否则一旦push，处理起来会非常麻烦。清除本地缓存如果一不小心在创建.gitignore文件之前就使用了git push，这样可能会使得.gitignore的忽略规则失效，这是因为新建的文件在git中会有缓存，如果某些文件已经被纳入了版本管理中，就算是在.gitignore中已经声明了忽略路径也是不起作用的，这时候我们就应该先把本地缓存删除，然后再进行git push，这样就不会出现忽略的文件了。git清除本地缓存命令如下：123456# 清除缓存git rm -r --cached .# 将所有文件改变上传到暂存区git add .# 将暂存区的所有内容提交到当前分支上git commit -m 'update .gitignore'git push -u VS git pushgit push的用法：12Usage: git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;使用实例：12345678# 将本地的master分支推送到origin主机的master分支。如果master不存在，则会被新建git push origin master# 如果当前分支与多个主机存在追踪关系(连接)，则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用：# 先使用带-u参数的git pushgit push -u origin master # 后续的git push可以省略参数git push将已有的文件夹上传到github背景：可能有些时候并没有在文件夹创建之初没有考虑到上传到Github的情况，所以就需要将已有的文件夹上传到Github，但是又不希望先建立空的repo，然后clone下来将文件复制进去，然后就有了下面的方法：在bash下进入需要上传的文件夹：cd dir初始化产生版本库：git init将所有文件添加到暂存区：git add .提交文件：git commit -m &quot;message&quot;添加远程仓库：git remote add origin git@github.com:showteeth/orth_blast_docker.git上传本地代码：git push -u origin master后续上传：git add .git commit -m &quot;message&quot;git push origin master或者git push在使用git push -u origin master上传本地代码时，如果报错：1error: failed to push some refs to 'git@github.com:showteeth/orth_blast_docker.git'按照这个issue的说法，可以试试git push -u origin master --force或者按照这篇文章的做法：合并代码：git pull origin master或者git pull --rebase origin master(文章中使用的这个，但我感觉是不是应该使用前面的，下次可以先试试前面的可不可以)上传代码：git push -u origin master]]></content>
@@ -71,11 +83,6 @@
       <tags>
         <tag>博客</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[cat-显示、读取或拼接文件内容]]></title>
-    <url>%2Fposts%2F24399.html</url>
-    <content type="text"><![CDATA[这里写摘要，显示更好看开始于二级标题参考链接cat命令Linux cat命令Linux cat命令详解Linux中cat、more、less、tail、head命令的区别]]></content>
   </entry>
   <entry>
     <title><![CDATA[argparse-命令行选项与参数解析]]></title>
