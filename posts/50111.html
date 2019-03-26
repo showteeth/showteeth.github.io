@@ -1,0 +1,686 @@
+<!DOCTYPE html><html class="theme-next mist" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script src="/lib/pace/pace.min.js?v=1.0.2"></script><link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet"><script></script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/dark_logo_180x180.jpg?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="/images/dark_logo_32x32.jpg?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="/images/dark_logo_16x16.jpg?v=5.1.4"><link rel="mask-icon" href="/images/dark_logo.svg?v=5.1.4" color="#222"><meta name="keywords" content="常用模块,"><link rel="alternate" href="/atom.xml" title="showteeth's blog" type="application/atom+xml"><meta name="description" content="这篇文章将自己在使用Selenium过程中遇到的好文章进行了汇总和整理，便于后续继续使用这个工具时能尽快找到好的参考，节省时间！"><meta name="keywords" content="常用模块"><meta property="og:type" content="article"><meta property="og:title" content="Python爬虫之Selenium-自动化测试"><meta property="og:url" content="http://showteeth.tech/posts/50111.html"><meta property="og:site_name" content="showteeth&#39;s blog"><meta property="og:description" content="这篇文章将自己在使用Selenium过程中遇到的好文章进行了汇总和整理，便于后续继续使用这个工具时能尽快找到好的参考，节省时间！"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193320778-188010556.png"><meta property="og:image" content="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193414684-1032464838.png"><meta property="og:image" content="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193535200-558486822.png"><meta property="og:image" content="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193737497-369795287.png"><meta property="og:updated_time" content="2019-03-26T03:33:39.595Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Python爬虫之Selenium-自动化测试"><meta name="twitter:description" content="这篇文章将自己在使用Selenium过程中遇到的好文章进行了汇总和整理，便于后续继续使用这个工具时能尽快找到好的参考，节省时间！"><meta name="twitter:image" content="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193320778-188010556.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",version:"5.1.4",sidebar:{position:"left",display:"post",offset:12,b2t:!1,scrollpercent:!0,onmobile:!1},fancybox:!0,tabs:!0,motion:{enable:!1,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://showteeth.tech/posts/50111.html"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><script>!function(e,t,o,c,i,a,n){e.DaoVoiceObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,a=t.createElement(o),n=t.getElementsByTagName(o)[0],a.async=1,a.src=c,a.charset="utf-8",n.parentNode.insertBefore(a,n)}(window,document,"script",("https:"==document.location.protocol?"https:":"http:")+"//widget.daovoice.io/widget/9d02ffb0.js","daovoice"),daovoice("init",{app_id:"9d02ffb0"}),daovoice("update")</script><title>Python爬虫之Selenium-自动化测试 | showteeth's blog</title></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><a href="https://github.com/showteeth" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513;color:#fff;position:absolute;top:0;border:0;right:0" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">showteeth's blog</span> <span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle"></p></div><div class="site-nav-toggle"><button><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="menu-item-icon fa fa-fw fa-camera"></i><br>相册</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i> </span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"><input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://showteeth.tech/posts/50111.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="showteeth"><meta itemprop="description" content><meta itemprop="image" content="/images/timg.jfif"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="showteeth's blog"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Python爬虫之Selenium-自动化测试</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T11:28:13+08:00">2019-03-26 </time><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-calendar-check-o"></i> </span><span class="post-meta-item-text">更新于&#58;</span> <time title="更新于" itemprop="dateModified" datetime="2019-03-26T11:33:39+08:00">2019-03-26 </time></span><span class="post-category"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-folder-o"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span> </a></span>， <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/常用模块/" itemprop="url" rel="index"><span itemprop="name">常用模块</span> </a></span></span><span class="post-comments-count"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-comment-o"></i> </span><a href="/posts/50111.html#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/50111.html" itemprop="commentCount"></span> </a></span><span class="post-meta-divider">|</span> <span class="page-pv"><i class="fa fa-file-o"></i> 本文总阅读量 <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i> </span><span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">4.4k 字 </span><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i> </span><span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">20 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><div class="note info"><p>这篇文章将自己在使用Selenium过程中遇到的好文章进行了汇总和整理，便于后续继续使用这个工具时能尽快找到好的参考，节省时间！</p></div><a id="more"></a><h2 id="Selenium简介"><a href="#Selenium简介" class="headerlink" title="Selenium简介"></a>Selenium简介</h2><p>selenium 是一套完整的web应用程序测试系统，包含了测试的录制（selenium IDE）,编写及运行（Selenium Remote Control）和测试的并行处理（Selenium Grid）。Selenium的核心Selenium Core基于JsUnit，完全由JavaScript编写，因此可以用于任何支持JavaScript的浏览器上。</p><p>selenium可以模拟真实浏览器，自动化测试工具，支持多种浏览器，爬虫中主要用来解决JavaScript渲染问题。</p><hr><h2 id="selenium用法"><a href="#selenium用法" class="headerlink" title="selenium用法"></a>selenium用法</h2><p>用python写爬虫的时候，主要用的是selenium的Webdriver，我们可以通过下面的方式先看看Selenium.Webdriver支持哪些浏览器</p><p><img src="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193320778-188010556.png" alt></p><p>执行结果如下，从结果中我们也可以看出基本山支持了常见的所有浏览器：</p><p><img src="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193414684-1032464838.png" alt></p><p>这里要说一下比较重要的PhantomJS,PhantomJS是一个而基于WebKit的服务端JavaScript API,支持Web而不需要浏览器支持，其快速、原生支持各种Web标准：Dom处理，CSS选择器，JSON等等。PhantomJS可以用用于页面自动化、网络监测、网页截屏，以及无界面测试</p><h3 id="声明浏览器对象"><a href="#声明浏览器对象" class="headerlink" title="声明浏览器对象"></a>声明浏览器对象</h3><p>上面我们知道了selenium支持很多的浏览器，但是如果想要声明并调用浏览器则需要：</p><pre><code>from selenium import webdriver
+# 打开浏览器，注意需要提前下载浏览器驱动以及将其写入环境变量
+browser = webdriver.Chrome()
+browser = webdriver.Firefox()
+</code></pre><p>这里只写了两个例子，当然了其他的支持的浏览器都可以通过这种方式调用。</p><p><strong>可能遇到的问题</strong>：<br></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">browser = webdriver.Chrome()</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"C:\Users\14910\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py"</span>, line <span class="number">76</span>, <span class="keyword">in</span> start</span><br><span class="line">    stdin=PIPE)</span><br><span class="line">  File <span class="string">"C:\Users\14910\Anaconda3\lib\subprocess.py"</span>, line <span class="number">769</span>, <span class="keyword">in</span> __init__</span><br><span class="line">    restore_signals, start_new_session)</span><br><span class="line">  File <span class="string">"C:\Users\14910\Anaconda3\lib\subprocess.py"</span>, line <span class="number">1172</span>, <span class="keyword">in</span> _execute_child</span><br><span class="line">    startupinfo)</span><br><span class="line">FileNotFoundError: [WinError <span class="number">2</span>] 系统找不到指定的文件。</span><br></pre></td></tr></table></figure><p></p><p><strong>这是因为没有将浏览器驱动以及没有将浏览器驱动添加到环境变量</strong>：<br></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 驱动下载地址</span></span><br><span class="line">http://npm.taobao.org/mirrors/chromedriver/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载对应的chrome版本之后将压缩包解压，我下载的是chromedriver_win32.zip</span></span><br><span class="line"><span class="comment"># 发现32位的也能用，关键是只提供了32位的</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压上述包，然后将exe文件写入环境变量，可将exe文件放在C:\Program Files (x86)\Google\Chrome\Application目录下</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加环境变量(可能需要重启电脑才会生效)之后直接输入</span></span><br><span class="line">chromedriver.exe</span><br><span class="line">Starting ChromeDriver <span class="number">72.0</span><span class="number">.3626</span><span class="number">.69</span> (<span class="number">3</span>c16f8a135abc0d4da2dff33804db79b849a7c38) on port <span class="number">9515</span></span><br><span class="line">Only local connections are allowed.</span><br><span class="line">Please protect ports used by ChromeDriver <span class="keyword">and</span> related test frameworks to prevent access by malicious code.</span><br></pre></td></tr></table></figure><p></p><hr><h3 id="访问页面"><a href="#访问页面" class="headerlink" title="访问页面"></a>访问页面</h3><pre><code>from selenium import webdriver
+
+# 打开浏览器
+browser = webdriver.Chrome()
+# 打开网站
+browser.get(&quot;http://www.baidu.com&quot;)
+# 输入网站源码
+print(browser.page_source)
+# 关闭浏览器
+browser.close() 
+</code></pre><p>上述代码运行后，会自动打开Chrome浏览器，并登陆百度打印百度首页的源代码，然后关闭浏览器</p><hr><h3 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h3><h4 id="单个元素查找"><a href="#单个元素查找" class="headerlink" title="单个元素查找"></a>单个元素查找</h4><pre><code>from selenium import webdriver
+
+browser = webdriver.Chrome()
+browser.get(&quot;http://www.taobao.com&quot;)
+# 使用id查找
+input_first = browser.find_element_by_id(&quot;q&quot;)
+# 使用css_selector查找
+input_second = browser.find_element_by_css_selector(&quot;#q&quot;)
+# 使用xpath查找
+input_third = browser.find_element_by_xpath(&apos;//*[@id=&quot;q&quot;]&apos;)
+
+print(input_first)
+print(input_second)
+print(input_third)
+browser.close()
+</code></pre><p>这里我们通过三种不同的方式去获取响应的元素，第一种是通过id的方式，第二个中是CSS选择器，第三种是xpath选择器，结果都是相同的。<br>结果如下：</p><p><img src="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193535200-558486822.png" alt></p><p><strong>这里列举一下常用的查找元素方法</strong>：</p><ul><li><code>find_element_by_name</code></li><li><code>find_element_by_id</code></li><li><code>find_element_by_xpath</code></li><li><code>find_element_by_link_text</code></li><li><code>find_element_by_partial_link_text</code></li><li><code>find_element_by_tag_name</code></li><li><code>find_element_by_class_name</code></li><li><code>find_element_by_css_selector</code></li></ul><p>下面这种方式是比较通用的一种方式：这里需要记住By模块所以需要导入<code>from selenium.webdriver.common.by import By</code></p><pre><code>from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+browser = webdriver.Chrome()
+browser.get(&quot;http://www.taobao.com&quot;)
+# 设置查找的方法以及查找的对象
+input_first = browser.find_element(By.ID,&quot;q&quot;)
+
+print(input_first)
+browser.close()
+</code></pre><p>当然这种方法和上述的方式是通用的，<code>browser.find_element(By.ID,&quot;q&quot;)</code>这里<code>By.ID</code>中的ID可以替换为其他几个</p><hr><h4 id="多个元素查找"><a href="#多个元素查找" class="headerlink" title="多个元素查找"></a>多个元素查找</h4><p>其实多个元素和单个元素的区别，举个例子：<code>find_elements</code>,单个元素是<code>find_element</code>,其他使用上没什么区别，通过其中的一个例子演示：</p><pre><code>from selenium import webdriver
+
+browser = webdriver.Chrome()
+browser.get(&quot;http://www.taobao.com&quot;)
+# 执行查找
+lis = browser.find_elements_by_css_selector(&apos;.service-bd li&apos;)
+
+# 使用通用的方法实现
+from selenium.webdriver.common.by import By
+lis = browser.find_elements(By.CSS_SELECTOR,&apos;.service-bd li&apos;)
+
+print(lis)
+browser.close()
+</code></pre><p>这样获得就是一个列表</p><p><img src="https://images2015.cnblogs.com/blog/997599/201706/997599-20170606193737497-369795287.png" alt></p><p><strong>同样的在单个元素中查找的方法在多个元素查找中同样存在</strong>：</p><ul><li><code>find_elements_by_name</code></li><li><code>find_elements_by_id</code></li><li><code>find_elements_by_xpath</code></li><li><code>find_elements_by_link_text</code></li><li><code>find_elements_by_partial_link_text</code></li><li><code>find_elements_by_tag_name</code></li><li><code>find_elements_by_class_name</code></li><li><code>find_elements_by_css_selector</code></li></ul><hr><h3 id="元素交互操作"><a href="#元素交互操作" class="headerlink" title="元素交互操作"></a>元素交互操作</h3><p>对于获取的元素调用交互方法:</p><pre><code>from selenium import webdriver
+import time
+
+browser = webdriver.Chrome()
+browser.get(&quot;http://www.taobao.com&quot;)
+
+input_str = browser.find_element_by_id(&apos;q&apos;)
+# 发送信息
+input_str.send_keys(&quot;ipad&quot;)
+
+time.sleep(1)
+
+input_str.clear()
+
+input_str.send_keys(&quot;MakBook pro&quot;)
+button = browser.find_element_by_class_name(&apos;btn-search&apos;)
+
+button.click()
+</code></pre><p><strong>运行的结果可以看出程序会自动打开Chrome浏览器并打开淘宝输入ipad,然后删除，重新输入MakBook pro，并点击搜索</strong></p><p>Selenium所有的api文档：<a href="http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.common.action_chains" target="_blank" rel="noopener">http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.common.action_chains</a></p><p><strong>交互动作</strong></p><p><strong>将动作附加到动作链中串行执行</strong>：</p><pre><code>from selenium import webdriver
+from selenium.webdriver import ActionChains
+
+browser = webdriver.Chrome()
+url = &quot;http://www.runoob.com/try/try.php?filename=jqueryui-api-droppable&quot;
+browser.get(url)
+
+browser.switch_to.frame(&apos;iframeResult&apos;)
+
+source = browser.find_element_by_css_selector(&apos;#draggable&apos;)
+target = browser.find_element_by_css_selector(&apos;#droppable&apos;)
+
+actions = ActionChains(browser)
+actions.drag_and_drop(source, target)
+actions.perform()
+</code></pre><p>更多操作参考：<a href="http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.common.action_chains" target="_blank" rel="noopener">http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.common.action_chains</a></p><hr><h3 id="执行JavaScript"><a href="#执行JavaScript" class="headerlink" title="执行JavaScript"></a>执行JavaScript</h3><p>这是一个非常有用的方法，这里就可以直接调用js方法来实现一些操作，下面的例子是 <strong>通过登录知乎然后通过js翻到页面底部，并弹框提示</strong></p><pre><code>from selenium import webdriver
+browser = webdriver.Chrome()
+browser.get(&quot;http://www.zhihu.com/explore&quot;)
+
+browser.execute_script(&apos;window.scrollTo(0, document.body.scrollHeight)&apos;)
+browser.execute_script(&apos;alert(&quot;To Bottom&quot;)&apos;)
+</code></pre><h4 id="获取元素属性-get-attribute-‘class’"><a href="#获取元素属性-get-attribute-‘class’" class="headerlink" title="获取元素属性-get_attribute(‘class’)"></a>获取元素属性-get_attribute(‘class’)</h4><pre><code>from selenium import webdriver
+
+browser = webdriver.Chrome()
+url = &apos;https://www.zhihu.com/explore&apos;
+browser.get(url)
+
+logo = browser.find_element_by_id(&apos;zh-top-link-logo&apos;)
+
+print(logo)
+print(logo.get_attribute(&apos;class&apos;))
+</code></pre><hr><h4 id="获取文本值-text"><a href="#获取文本值-text" class="headerlink" title="获取文本值-text"></a>获取文本值-text</h4><pre><code>from selenium import webdriver
+
+browser = webdriver.Chrome()
+url = &apos;https://www.zhihu.com/explore&apos;
+browser.get(url)
+
+input = browser.find_element_by_class_name(&apos;zu-top-add-question&apos;)
+print(input.text)
+</code></pre><hr><h4 id="获取ID、位置、标签名"><a href="#获取ID、位置、标签名" class="headerlink" title="获取ID、位置、标签名"></a>获取ID、位置、标签名</h4><ul><li><code>id</code></li><li><code>location</code></li><li><code>tag_name</code></li><li><p><code>size</code></p><p>from selenium import webdriver</p><p>browser = webdriver.Chrome()<br>url = ‘<a href="https://www.zhihu.com/explore&#39;" target="_blank" rel="noopener">https://www.zhihu.com/explore&#39;</a><br>browser.get(url)</p><p>input = browser.find_element_by_class_name(‘zu-top-add-question’)<br>print(input.id)<br>print(input.location)<br>print(input.tag_name)<br>print(input.size)</p></li></ul><hr><h3 id="Frame"><a href="#Frame" class="headerlink" title="Frame"></a>Frame</h3><p>在很多网页中都是有Frame标签，所以我们爬取数据的时候就涉及到切入到frame中以及切出来的问题，通过下面的例子演示<br>这里常用的是<code>switch_to.from()</code>和<code>switch_to.parent_frame()</code>:</p><pre><code>import time
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+
+browser = webdriver.Chrome()
+url = &apos;http://www.runoob.com/try/try.php?filename=jqueryui-api-droppable&apos;
+browser.get(url)
+
+browser.switch_to.frame(&apos;iframeResult&apos;)
+source = browser.find_element_by_css_selector(&apos;#draggable&apos;)
+print(source)
+
+try:
+    logo = browser.find_element_by_class_name(&apos;logo&apos;)
+except NoSuchElementException:
+    print(&apos;NO LOGO&apos;)
+
+browser.switch_to.parent_frame()
+logo = browser.find_element_by_class_name(&apos;logo&apos;)
+print(logo)
+print(logo.text)
+</code></pre><hr><h3 id="等待"><a href="#等待" class="headerlink" title="等待"></a>等待</h3><p>当使用了隐式等待执行测试的时候，如果 WebDriver没有在 DOM中找到元素，将继续等待，超出设定时间后则抛出找不到元素的异常, 换句话说，当查找元素或元素并没有立即出现的时候，隐式等待将等待一段时间再查找 DOM，默认的时间是0</p><h4 id="隐式等待"><a href="#隐式等待" class="headerlink" title="隐式等待"></a>隐式等待</h4><p>到了一定的时间发现元素还没有加载，则继续等待我们指定的时间，如果超过了我们指定的时间还没有加载就会抛出异常，如果没有需要等待的时候就已经加载完毕就会立即执行</p><pre><code>from selenium import webdriver
+
+browser = webdriver.Chrome()
+# 设置隐式等待
+browser.implicitly_wait(10)
+
+browser.get(&apos;https://www.zhihu.com/explore&apos;)
+input = browser.find_element_by_class_name(&apos;zu-top-add-question&apos;)
+print(input)
+</code></pre><hr><p><strong>显示等待</strong><br>指定一个等待条件，并且指定一个最长等待时间，会在这个时间内进行判断是否满足等待条件，如果成立就会立即返回，如果不成立，就会一直等待，直到等待你指定的最长等待时间，如果还是不满足，就会抛出异常，如果满足了就会正常返回</p><p><strong>常用的判断条件</strong>：</p><ul><li><code>title_is</code> 标题是某内容</li><li><code>title_contains</code> 标题包含某内容</li><li><code>presence_of_element_located</code> 元素加载出，传入定位元组，如(By.ID, ‘p’)</li><li><code>visibility_of_element_located</code> 元素可见，传入定位元组</li><li><code>visibility_of</code> 可见，传入元素对象</li><li><code>presence_of_all_elements_located</code> 所有元素加载出</li><li><code>text_to_be_present_in_element</code> 某个元素文本包含某文字</li><li><code>text_to_be_present_in_element_value</code> 某个元素值包含某文字</li><li><code>frame_to_be_available_and_switch_to_it</code> frame加载并切换</li><li><code>invisibility_of_element_located</code> 元素不可见</li><li><code>element_to_be_clickable</code> 元素可点击</li><li><code>staleness_of</code> 判断一个元素是否仍在DOM，可判断页面是否已经刷新</li><li><code>element_to_be_selected</code> 元素可选择，传元素对象</li><li><code>element_located_to_be_selected</code> 元素可选择，传入定位元组</li><li><code>element_selection_state_to_be</code> 传入元素对象以及状态，相等返回True，否则返回False</li><li><code>element_located_selection_state_to_be</code> 传入定位元组以及状态，相等返回True，否则返回False</li><li><code>alert_is_present</code> 是否出现Alert</li></ul><p>实例讲解，以来自<a href="https://www.cnblogs.com/yuuwee/p/6635652.html" target="_blank" rel="noopener">这篇文章</a>：</p><pre><code>#coding=utf-8
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+
+base_url = &quot;http://www.baidu.com&quot;
+driver = webdriver.Firefox()
+# 定义等待时间，这是隐式等待，当隐式等待和显示等待都存在时，超时时间取二者中较大的，显示等待是sleep(10)这种
+driver.implicitly_wait(5)
+
+# 使用
+# 定义查找位置
+locator = (By.ID,&apos;kw&apos;)
+driver.get(base_url)
+
+# 判断title,返回布尔值
+WebDriverWait(driver,10).until(EC.title_is(u&quot;百度一下，你就知道&quot;))
+
+# 判断title，返回布尔值
+WebDriverWait(driver,10).until(EC.title_contains(u&quot;百度一下&quot;))
+
+# 判断某个元素是否被加到了dom树里，并不代表该元素一定可见，如果定位到就返回WebElement
+WebDriverWait(driver,10).until(EC.presence_of_element_located((By.ID,&apos;kw&apos;)))
+
+# 判断某个元素是否被添加到了dom里并且可见，可见代表元素可显示且宽和高都大于0
+WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.ID,&apos;su&apos;)))
+
+# 判断元素是否可见，如果可见就返回这个元素
+WebDriverWait(driver,10).until(EC.visibility_of(driver.find_element(by=By.ID,value=&apos;kw&apos;)))
+
+# 判断是否至少有1个元素存在于dom树中，如果定位到就返回列表
+WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,&apos;.mnav&apos;)))
+
+# 判断是否至少有一个元素在页面中可见，如果定位到就返回列表
+WebDriverWait(driver,10).until(EC.visibility_of_any_elements_located((By.CSS_SELECTOR,&apos;.mnav&apos;)))
+
+# 判断指定的元素中是否包含了预期的字符串，返回布尔值
+WebDriverWait(driver,10).until(EC.text_to_be_present_in_element((By.XPATH,&quot;//*[@id=&apos;u1&apos;]/a[8]&quot;),u&apos;设置&apos;))
+
+# 判断指定元素的属性值中是否包含了预期的字符串，返回布尔值
+WebDriverWait(driver,10).until(EC.text_to_be_present_in_element_value((By.CSS_SELECTOR,&apos;#su&apos;),u&apos;百度一下&apos;))
+
+# 判断该frame是否可以switch进去，如果可以的话，返回True并且switch进去，否则返回False，注意这里并没有一个frame可以切换进去
+WebDriverWait(driver,10).until(EC.frame_to_be_available_and_switch_to_it(locator))
+
+# 判断某个元素在是否存在于dom或不可见,如果可见返回False,不可见返回这个元素，注意#swfEveryCookieWrap在此页面中是一个隐藏的元素
+WebDriverWait(driver,10).until(EC.invisibility_of_element_located((By.CSS_SELECTOR,&apos;#swfEveryCookieWrap&apos;)))
+
+# 判断某个元素中是否可见并且是enable的，代表可点击
+WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,&quot;//*[@id=&apos;u1&apos;]/a[8]&quot;))).click()
+driver.find_element_by_xpath(&quot;//*[@id=&apos;wrapper&apos;]/div[6]/a[1]&quot;).click()
+WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,&quot;//*[@id=&apos;wrapper&apos;]/div[6]/a[1]&quot;))).click()
+
+# 等待某个元素从dom树中移除，这里没有找到合适的例子
+#WebDriverWait(driver,10).until(EC.staleness_of(driver.find_element(By.ID,&apos;su&apos;)))
+
+# 判断某个元素是否被选中了,一般用在下拉列表
+WebDriverWait(driver,10).until(EC.element_to_be_selected(driver.find_element(By.XPATH,&quot;//*[@id=&apos;nr&apos;]/option[1]&quot;)))
+
+# 判断某个元素的选中状态是否符合预期
+WebDriverWait(driver,10).until(EC.element_selection_state_to_be(driver.find_element(By.XPATH,&quot;//*[@id=&apos;nr&apos;]/option[1]&quot;),True))
+
+# 判断某个元素的选中状态是否符合预期
+WebDriverWait(driver,10).until(EC.element_located_selection_state_to_be((By.XPATH,&quot;//*[@id=&apos;nr&apos;]/option[1]&quot;),True))
+driver.find_element_by_xpath(&quot;.//*[@id=&apos;gxszButton&apos;]/a[1]&quot;).click()
+
+# 判断页面上是否存在alert,如果有就切换到alert并返回alert的内容
+instance = WebDriverWait(driver,10).until(EC.alert_is_present())
+print instance.text
+instance.accept()
+
+driver.close()
+</code></pre><ul><li><strong>关于显式等待和隐式等待具体的讲解可以参考<a href="https://www.jianshu.com/p/bf27aad96614" target="_blank" rel="noopener">这篇文章</a></strong></li><li><strong>更多操作</strong>参考：<a href="http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions" target="_blank" rel="noopener">http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions</a></li></ul><hr><h3 id="浏览器的前进和后退"><a href="#浏览器的前进和后退" class="headerlink" title="浏览器的前进和后退"></a>浏览器的前进和后退</h3><ul><li><code>back()</code></li><li><p><code>forward()</code></p><p>import time<br>from selenium import webdriver</p><p>browser = webdriver.Chrome()<br>browser.get(‘<a href="https://www.baidu.com/&#39;" target="_blank" rel="noopener">https://www.baidu.com/&#39;</a>)<br>browser.get(‘<a href="https://www.taobao.com/&#39;" target="_blank" rel="noopener">https://www.taobao.com/&#39;</a>)<br>browser.get(‘<a href="https://www.python.org/&#39;" target="_blank" rel="noopener">https://www.python.org/&#39;</a>)</p><p>browser.back()<br>time.sleep(1)</p><p>browser.forward()<br>browser.close()</p></li></ul><hr><h3 id="cookie操作"><a href="#cookie操作" class="headerlink" title="cookie操作"></a>cookie操作</h3><ul><li><code>get_cookies()</code></li><li><code>delete_all_cookes()</code></li><li><p><code>add_cookie()</code></p><p>from selenium import webdriver</p><p>browser = webdriver.Chrome()<br>browser.get(‘<a href="https://www.zhihu.com/explore&#39;" target="_blank" rel="noopener">https://www.zhihu.com/explore&#39;</a>)<br>print(browser.get_cookies())</p><p>browser.add_cookie({‘name’: ‘name’, ‘domain’: ‘<a href="http://www.zhihu.com&#39;" target="_blank" rel="noopener">www.zhihu.com&#39;</a>, ‘value’: ‘zhaofan’})<br>print(browser.get_cookies())</p><p>browser.delete_all_cookies()<br>print(browser.get_cookies())</p></li></ul><hr><h3 id="选项卡管理"><a href="#选项卡管理" class="headerlink" title="选项卡管理"></a>选项卡管理</h3><ul><li>通过执行js命令实现新开选项卡<code>window.open()</code></li><li>不同的选项卡是存在列表里<code>browser.window_handles</code></li><li><p>通过<code>browser.window_handles[0]</code>就可以操作第一个选项卡</p><p>import time<br>from selenium import webdriver</p><p>browser = webdriver.Chrome()<br>browser.get(‘<a href="https://www.baidu.com&#39;" target="_blank" rel="noopener">https://www.baidu.com&#39;</a>)</p><p>browser.execute_script(‘window.open()’)<br>print(browser.window_handles)</p><p>browser.switch_to_window(browser.window_handles[1])<br>browser.get(‘<a href="https://www.taobao.com&#39;" target="_blank" rel="noopener">https://www.taobao.com&#39;</a>)</p><p>time.sleep(1)</p><p>browser.switch_to_window(browser.window_handles[0])<br>browser.get(‘<a href="https://python.org&#39;" target="_blank" rel="noopener">https://python.org&#39;</a>)</p></li></ul><hr><h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>这里的异常比较复杂，官网的参考地址：<br><a href="http://selenium-python.readthedocs.io/api.html#module-selenium.common.exceptions" target="_blank" rel="noopener">http://selenium-python.readthedocs.io/api.html#module-selenium.common.exceptions</a><br>这里只进行简单的演示，查找一个不存在的元素</p><pre><code>from selenium import webdriver
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+
+browser = webdriver.Chrome()
+try:
+    browser.get(&apos;https://www.baidu.com&apos;)
+except TimeoutException:
+    print(&apos;Time Out&apos;)
+try:
+    browser.find_element_by_id(&apos;hello&apos;)
+except NoSuchElementException:
+    print(&apos;No Element&apos;)
+finally:
+    browser.close()
+</code></pre><hr><p><br></p><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><strong>无界面模式浏览器</strong>：</p><blockquote><p>opt=webdriver.ChromeOptions()<br># 把chrome设置成无界面模式，不论windows还是linux都可以，自动适配对应参数<br>opt.set_headless()#无界面<br>self.driver=webdriver.Chrome(options=opt)</p></blockquote><pre><code>from selenium import  webdriver
+import  lxml
+from lxml import  etree
+import re
+import time
+import  pymysql
+import urllib.request
+import requests
+
+from selenium.webdriver.support.ui import  WebDriverWait
+from selenium.webdriver.support import  expected_conditions as EC
+from selenium.webdriver.common.by import  By
+
+class LagouSpider(object):
+    def __init__(self):
+        opt=webdriver.ChromeOptions()
+        # 把chrome设置成无界面模式，不论windows还是linux都可以，自动适配对应参数
+        opt.set_headless()#无界面
+        self.driver=webdriver.Chrome(options=opt)
+        self.url=&quot;https://www.lagou.com/zhaopin/Python/&quot;
+
+    def run(self):
+        self.driver.get(self.url)
+        while True:
+            source = self.driver.page_source
+            #此句话大致意思，执行driver 时间不超过20s 什么时候加载到xpath定位的位置神魔时候停止开始执行页面 内容爬去
+            WebDriverWait(driver=self.driver,timeout=20).until(EC.presence_of_all_elements_located(By.XPATH,&apos;//*[@id=&quot;s_position_list&quot;]/div[2]/div/a[6]&apos;))
+
+            # WebDriverWait(driver=self.driver, timeout=20).until(
+            #     EC.presence_of_element_located((By.XPATH, &apos;//*[@id=&quot;s_position_list&quot;]/div[2]/div/a[6]&apos;))
+            # )
+            self.parse_list_page(source)
+            # 点“下一页”
+            next_btn=self.driver.find_element_by_xpath(  &apos;//*[@id=&quot;s_position_list&quot;]/div[2]/div/a[6]&apos;)
+            # 提取下一页的按钮，注意class的值中有空格不可用。
+            if &quot;pager_next_disabled&quot; in next_btn.get_attribute(&quot;class&quot;):
+                break
+            else:
+                next_btn.click()
+            time.sleep(1)
+            # next_btn = self.driver.find_element_by_xpath(
+            #      &apos;//*[@id=&quot;s_position_list&quot;]/div[2]/div/a[6]&apos;)
+            # if &quot;pager_next_disabled&quot; in next_btn.get_attribute(&quot;class&quot;):
+            #     break
+            # else:
+            #     next_btn.click()
+            # time.sleep(1)
+
+
+        # source=self.driver.page_source
+        # #print(source)
+        # self.parse_list_page(source)
+    #职位url列表
+    def parse_list_page(self,source):
+        #t通过etree调用xpath
+        html=etree.HTML(source)
+        links=html.xpath(&apos;//*[@id=&quot;s_position_list&quot;]/ul/li/div[1]/div[1]/div[1]/a/@href&apos;)
+        for  link in links:
+            self.request_detail_page(link)
+            # print(link)
+            #time.sleep(1)
+
+
+    #执行提取的url
+    def request_detail_page(self,url):
+        #self.driver.get(url)
+        #打开新的页面
+        self.driver.execute_script(&quot;window.open(&apos;%s&apos;)&quot;%url)
+        #切换句柄进入新打开的页面
+        self.driver.switch_to.window((self.driver.window_handles[1]))
+        # self.driver.execute_script(&quot;window.open(&apos;%s&apos;)&quot; % url)
+        # self.driver.switch_to.window(self.driver.window_handles[1])
+        #加载出来工作名开始爬取
+        WebDriverWait(driver=self.driver, timeout=20).until(
+            EC.presence_of_element_located((By.XPATH, &quot;//div[@class=&apos;job-name&apos;]/span[@class=&apos;name&apos;]&quot;)) )
+
+        source=self.driver.page_source
+        self.parse_detail_page(source)
+        # 关闭当前详情页，并且切换到列表页
+        self.driver.close()
+        self.driver.switch_to.window(self.driver.window_handles[0])
+        #self.parse_list_page(source)
+
+    #提取具体信息
+    def parse_detail_page(self,source):
+        html=etree.HTML(source)
+        positionName=html.xpath(&quot;//div[@class=&apos;position-head&apos;]/div/div[1]/div/span/text()&quot;)[0]
+        job_request_spans=html.xpath(&quot;//div[@class=&apos;position-head&apos;]/div/div[1]/dd/p[1]/span&quot;)
+        salary=job_request_spans[0].xpath(&quot;.//text()&quot;)[0].strip()
+        city=job_request_spans[1].xpath(&apos;.//text()&apos;)[0].strip()
+        #city = re.match(r&apos;&lt;span class=&quot;xh-highlight&quot;&gt;/(.*?) /&lt;/span&gt;&apos;,city)
+        city = re.sub(r&quot;[\s/]&quot;, &quot;&quot;, city)#此处将&quot;/&quot;替换为空&quot;&quot;
+        work_years = job_request_spans[2].xpath(&apos;.//text()&apos;)[0].strip()
+        work_years = re.sub(r&quot;[\s/]&quot;, &quot;&quot;, work_years)
+        education = job_request_spans[3].xpath(&apos;.//text()&apos;)[0].strip()
+        education = re.sub(r&quot;[\s/]&quot;, &quot;&quot;, education)
+        content = &quot;&quot;.join(html.xpath(&quot;//dd[@class=&apos;job_bt&apos;]//text()&quot;)).strip()
+        #print(positionName)
+        #mysql=MySQLPipeline()
+        #mysql.process_item(positionName,salary,city,work_years,education,content)
+        &apos;&apos;&apos;
+        语法：  &apos;sep&apos;.join(seq)
+        参数说明
+        sep：分隔符。可以为空
+        seq：要连接的元素序列、字符串、元组、字典
+        上面的语法即：以sep作为分隔符，将seq所有的元素合并成一个新的字符串
+        返回值：返回一个以分隔符sep连接各个元素后生成的字符串
+        &apos;&apos;&apos;
+class MySQLPipeline(object):
+    def __init__(self):
+        self.conn = pymysql.connect(host=&quot;localhost&quot;,user=&quot;root&quot;,password=&quot;root&quot;,db=&quot;lagou&quot;, charset=&apos;utf8&apos;)
+        self.cursor = self.conn.cursor()
+
+    def process_item(self,positionName,salary,city,work_years,education,content):
+        insert_sql = &apos;&apos;&apos;
+                    insert into lagou_table(positionName,salary,city,work_years,education,content)
+                    values(%s,%s,%s,%s,%s,%s)
+                &apos;&apos;&apos;
+        self.cursor.execute(insert_sql,(positionName,salary,city,work_years,education,content))
+        self.conn.commit()
+
+
+    def close_spider(self,spider): #TypeError: close_spider() takes 1 positional argument but 2 were given
+        self.cursor.close()
+        self.conn.close()
+
+
+
+if __name__==&quot;__main__&quot;:
+    spider=LagouSpider()
+    spider.run()
+</code></pre><hr><p><br></p><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul><li><a href="https://www.cnblogs.com/zhaof/p/6953241.html" target="_blank" rel="noopener">本文框架来源</a></li><li><a href="https://www.cnblogs.com/yuuwee/p/6635652.html" target="_blank" rel="noopener">显示等待WebDriverWait与条件判断expected_conditions实例</a></li><li><a href="https://blog.csdn.net/work_you_will_see/article/details/84638750" target="_blank" rel="noopener">实战项目来源</a></li><li><a href="https://www.jianshu.com/p/bf27aad96614" target="_blank" rel="noopener">Selenium中的“显示等待”和“隐式等待”</a></li></ul><p><br></p><hr></div><div><div class="article_TheEnd">-----本文结束<i class="fa fa-paw"></i>感谢您的阅读-----</div></div><div><div class="my_post_copyright"><script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script><script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script><script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><p><span>本文标题:</span><a href="/posts/50111.html">Python爬虫之Selenium-自动化测试</a></p><p><span>文章作者:</span><a href="/" title="访问 showteeth 的个人博客">showteeth</a></p><p><span>发布时间:</span>2019年03月26日 - 11:28</p><p><span>最后更新:</span>2019年03月26日 - 11:33</p><p><span>原始链接:</span><a href="/posts/50111.html" title="Python爬虫之Selenium-自动化测试">http://showteeth.tech/posts/50111.html</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://showteeth.tech/posts/50111.html" aria-label="复制成功！"></i></span></p><p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p></div><script>var clipboard=new Clipboard(".fa-clipboard");$(".fa-clipboard").click(function(){clipboard.on("success",function(){swal({title:"",text:"复制成功",icon:"success",showConfirmButton:!0})})})</script></div><footer class="post-footer"><div class="post-tags"><a href="/tags/常用模块/" rel="tag"><i class="fa fa-tag"></i> 常用模块</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/posts/56982.html" rel="next" title="Python系列之logging-日志"><i class="fa fa-chevron-left"></i> Python系列之logging-日志</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"></div></div></footer></div></article><div class="post-spread"><script>window._bd_share_config={common:{bdText:"",bdMini:"1",bdMiniList:!1,bdPic:""},image:{viewList:["tsina","douban","sqq","qzone","weixin","twi","fbook"],viewText:"分享到：",viewSize:"16"},slide:{bdImg:"5",bdPos:"left",bdTop:"100"}}</script><script>with(document)(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="//bdimg.share.baidu.com/static/api/js/share.js?cdnversion="+~(-new Date/36e5)</script></div></div></div><div class="comments" id="comments"></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap">站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="/images/timg.jfif" alt="showteeth"><p class="site-author-name" itemprop="name">showteeth</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">54</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/index.html"><span class="site-state-item-count">20</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/index.html"><span class="site-state-item-count">25</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/showteeth" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a></span></div><div class="links-of-blogroll motion-element links-of-blogroll-block"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> Links</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"><a href="http://example.com/" title="hexo" target="_blank">hexo</a></li></ul></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Selenium简介"><span class="nav-number">1.</span> <span class="nav-text">Selenium简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#selenium用法"><span class="nav-number">2.</span> <span class="nav-text">selenium用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明浏览器对象"><span class="nav-number">2.1.</span> <span class="nav-text">声明浏览器对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问页面"><span class="nav-number">2.2.</span> <span class="nav-text">访问页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找元素"><span class="nav-number">2.3.</span> <span class="nav-text">查找元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单个元素查找"><span class="nav-number">2.3.1.</span> <span class="nav-text">单个元素查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多个元素查找"><span class="nav-number">2.3.2.</span> <span class="nav-text">多个元素查找</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元素交互操作"><span class="nav-number">2.4.</span> <span class="nav-text">元素交互操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行JavaScript"><span class="nav-number">2.5.</span> <span class="nav-text">执行JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取元素属性-get-attribute-‘class’"><span class="nav-number">2.5.1.</span> <span class="nav-text">获取元素属性-get_attribute(‘class’)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取文本值-text"><span class="nav-number">2.5.2.</span> <span class="nav-text">获取文本值-text</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取ID、位置、标签名"><span class="nav-number">2.5.3.</span> <span class="nav-text">获取ID、位置、标签名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Frame"><span class="nav-number">2.6.</span> <span class="nav-text">Frame</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#等待"><span class="nav-number">2.7.</span> <span class="nav-text">等待</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式等待"><span class="nav-number">2.7.1.</span> <span class="nav-text">隐式等待</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器的前进和后退"><span class="nav-number">2.8.</span> <span class="nav-text">浏览器的前进和后退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie操作"><span class="nav-number">2.9.</span> <span class="nav-text">cookie操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选项卡管理"><span class="nav-number">2.10.</span> <span class="nav-text">选项卡管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常处理"><span class="nav-number">2.11.</span> <span class="nav-text">异常处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战"><span class="nav-number">3.</span> <span class="nav-text">实战</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="copyright">&copy; <span itemprop="copyrightYear">2019</span> <span class="with-love"><i class="fa fa-user-secret"></i> </span><span class="author" itemprop="copyrightHolder">showteeth</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-area-chart"></i> </span><span class="post-meta-item-text">博客全站共&#58;</span> <span title="Site words total count">110.4k 字</span></div><div><span id="timeDate" title="网站运行时间">载入天数...</span><span id="times" title="网站运行时间">载入时分秒...</span></div><script>var now=new Date;function createtime(){var n=new Date("02/15/2019 00:00:00");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="————网站已运行"+dnum+"&thinsp;天",document.getElementById("times").innerHTML=hnum+"&thinsp;时"+mnum+"&thinsp;分"+snum+"&thinsp;秒————"}setInterval("createtime()",250)</script><div class="busuanzi-count"><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span class="site-uv"><i class="fa fa-user"></i> 本站访客数 <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人次 </span><span class="site-pv"><i class="fa fa-eye"></i> 本站总访问量 <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次</span></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/photoswipe.min.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/photoswipe-ui-default.min.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script type="text/javascript">var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'RVmtcwupIO6WlzPf3zKfb2EW-gzGzoHsz',
+        appKey: 'E8jip4oe60SRcVTMAbhG9cyY',
+        placeholder: '快来评论吧~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });</script><script type="text/javascript">// Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('-1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });</script><script type="text/javascript" src="/js/src/clipboard.min.js"></script><script type="text/javascript" src="/js/src/clipboard-use.js"></script><script src="/js/src/photoswipe.min.js?v=5.1.4"></script><script src="/js/src/photoswipe-ui-default.min.js?v=5.1.4"></script></body></html>
