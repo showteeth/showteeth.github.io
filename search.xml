@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[shuf-随机打乱文件]]></title>
+    <url>%2Fposts%2F50731.html</url>
+    <content type="text"><![CDATA[这篇文章学习了linux中对文件以及命令行输入进行随机打乱的命令shuf，主要参数包括-e、-i、-n、-o、-r等。shuf简介shuf命令可以对文件或者命令行输入进行随机打乱并输出到标准输出或者指定的文件中，还可以指定shuf的随机模式(有放回地抽取)shuf命令格式12345Usage: shuf [OPTION]... [FILE] or: shuf -e [OPTION]... [ARG]... or: shuf -i LO-HI [OPTION]...Write a random permutation of the input lines to standard output.shuf参数参数完整参数说明-e--echo将参数作为输入信息进行随机打乱-i--input-range=LO-HI在特定范围内生成随机数-n--head-count=COUNT最大输出行数-o--output=FILE指定输出文件--random-source=FILEget random bytes from FILE-r--repeat有放回地抽取，需要结合-n参数一同使用-z--zero-terminated以0 结束行而非换行符shuf使用实例测试文件1234567891011cat test.txt line1 line2 line3 line4 line5 line6 line7 line8 line9 line10shuf默认行为123456789101112shuf test.txt# 将test.txt随机打乱 line2 line9 line7 line5 line10 line6 line8 line3 line4 line1-e-将参数作为输入信息进行随机打乱12345678910111213shuf -e "abc" "def" "mbc" mbc abc defa=badadb=asdfc=sadfashuf -e $a $b $c# 变量拓展 badad sadfa asdf-i-在指定范围内生成随机数12345678910111213# 生成1-10范围内的随机数# 包括1和10shuf -i 1-10 3 7 4 6 1 9 2 5 10 8-n-最大输出行数12345# 输出随机打乱后结果的其中3行shuf -n 3 test.txt line4 line5 line9-o-指定输出文件123456789101112131415# 随机打乱并将结果输出到shuf.txtshuf test.txt -o shuf.txt# 查看结果cat shuf.txt line7 line1 line4 line6 line2 line9 line3 line5 line8 line10-r-有放回地抽取1234567891011121314151617# 有放回的抽取15行结果shuf -n 15 -r test.txt line6 line9 line6 line9 line8 line1 line6 line1 line2 line1 line10 line7 line10 line10 line8-r参数一定要结合-n参数一同使用，不然会一直运行有放回地抽取，相当于死循环，一直输出参考链接给初学者看的 shuf 命令教程Linux shuf Command Tutorial for Beginners (with Examples)]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用基本命令</category>
+      </categories>
+      <tags>
+        <tag>常用基本命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[shell中的float问题]]></title>
     <url>%2Fposts%2F61435.html</url>
     <content type="text"><![CDATA[这篇文章学习了shell中处理浮点比较相关的内容，主要学习了使用awk以及bc命令来进行浮点比较和运算，此前还有一篇相关的文章问题最近在编写shell脚本的时候发现shell中使用浮点的比较会出错：123if [[ 0.1 -lt 1 ]];then echo "yes";fi# 输出 -bash: [[: 0.1: syntax error: invalid arithmetic operator (error token is ".1")原因shell是不支持浮点的，不管是浮点的运算还是浮点的比较解决办法使用awkawk是支持浮点，包括运算以及比较：12345678910# 浮点运算awk 'BEGIN&#123;print 2/3&#125;' 0.666667# 比较awk 'BEGIN&#123;print 2&lt;3&#125;'# 真值返回1 1awk 'BEGIN&#123;print 2&gt;3&#125;'# 假则不输出结果使用bcbc是shell中支持浮点相关方法的命令：123456789101112# 浮点计算，如果结果小于0，会省略0，这里使用方法加上echo 'scale=2;a=2/3;if( length(a) == scale(a) ) print 0;print a ,"\n"' |bc# 输出结果，保留两位小数 0.66# 浮点的比较bc &lt;&lt;&lt; "0.2 &gt;= 0.3"# 假值返回0 0bc &lt;&lt;&lt; "0.2 &lt;= 0.3"# 真值返回1 1注意&lt;&lt;&lt;、&lt;&lt;、&lt;的区别：&lt;：表示从文件file中读取&lt;&lt;：表示从命令行读取到指定的结束字符&lt;&lt;&lt;：读取后面紧接的字符串具体的用法实例参考文章关于浮点运算可以参考之前的文章参考链接Floating Point Comparison in Shell Script]]></content>
