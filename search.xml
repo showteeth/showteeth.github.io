@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[printf-格式化输出字符串]]></title>
+    <url>%2Fposts%2F47162.html</url>
+    <content type="text"><![CDATA[这里写摘要，显示更好看开始于二级标题]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用内容总结</category>
+      </categories>
+      <tags>
+        <tag>常用内容总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[seq-产生固定步长整数]]></title>
+    <url>%2Fposts%2F1152.html</url>
+    <content type="text"><![CDATA[这篇文章学习了linux中常用的用来产生等间隔序列的命令seq，主要参数包括-w、-f、-s。seq命令简介seq命令可以用来产生从指定起始位点到终止位点固定步长的数字序列，这个序列可以是整数也可以是小数，在输出结果时，可以进行等宽输出、格式化输出、指定分隔符输出。seq命令格式1234Usage: seq [OPTION]... LAST or: seq [OPTION]... FIRST LAST or: seq [OPTION]... FIRST INCREMENT LASTPrint numbers from FIRST to LAST, in steps of INCREMENT.seq命令参数参数完整参数说明-f--format=FORMAT使用printf 样式的浮点格式来进行格式化输出，不能和-w一起用-s--separator=STRING指定输出分隔符，默认是换行符\n-w--equal-width输出等宽的结果，默认使用0来补全，不能和-f一起用seq使用实例seq默认行为1234567891011121314151617181920212223242526seq 1 5# 如果给定两个数字，则一个为起始，一个为终止，步长为1 1 2 3 4 5seq 2 1# 没有输出结果，步长还是默认为1# 即使起始大于终止seq 5# 如果只指定一个数字，则这个数字是终止数字，起始和步长都为1 1 2 3 4 5seq 1 0.5 2# 步长可以为小数# 起始和终止都可以为小数 1.0 1.5 2.0可以设置负的INCREMENT：1234seq 2 -1 1# 生成递减的序列 2 1-s-设置序列输出间隔符12345678910seq 1 4# 默认是通过换行符隔开 1 2 3 4seq -s ',' 1 4# 指定分隔符为逗号 1,2,3,4如果想要指定带有特殊意义的字符作为分隔符，就需要结合echo输出转义字符:1234567seq -s "\t" 1 4# 如果直接指定\t，输出结果不能达到理想的效果 1\t2\t3\t4seq -s "$(echo -e "\t")" 1 4# 使用echo -e输出结果进行指定 1 2 3 4指定转义字符时需要借助echo -e进行输出，直接指定会出错-w-设置等宽输出123456789101112131415161718seq 5 10# 默认行为 5 6 7 8 9 10seq -w 5 10# 设置输出的序列等宽# 宽度由最大数字的宽度决定 05 06 07 08 09 10-w参数不能和-f参数连用-f-进行格式化输出123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960seq 1 5# 默认情况# 等同于seq -f "%g" 1 5# %g表示浮点数不显无意义的零"0" 1 2 3 4 5# 而真正的浮点数seq -f "%f" 1 5# 后面有很多没有意义的0 1.000000 2.000000 3.000000 4.000000 5.000000# 科学计数法seq -f "%e" 1 5 1.000000e+00 2.000000e+00 3.000000e+00 4.000000e+00 5.000000e+00# 指定输出位宽seq -f "%3g" 5 10# 输出的位宽为3，宽度不足3的使用空格填充 5 6 7 8 9 10# 使用0填充位宽不足的seq -f "%03g" 5 10# 这个如果将位宽设置为2，就和-w参数相同# 但是-w参数可以自动识别最大宽度 005 006 007 008 009 010# 添加前缀输出seq -f "dir%g" 1 5# 添加前缀为dir dir1 dir2 dir3 dir4 dir5# 结合其他命令使用mkdir $(seq -f 'dir%g' 1 5)更多关于printf格式化输出的内容请参考这篇文章参考链接seq命令详解seq命令]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用基本命令</category>
+      </categories>
+      <tags>
+        <tag>常用基本命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[shuf-随机打乱文件]]></title>
     <url>%2Fposts%2F50731.html</url>
     <content type="text"><![CDATA[这篇文章学习了linux中对文件以及命令行输入进行随机打乱的命令shuf，主要参数包括-e、-i、-n、-o、-r等。shuf简介shuf命令可以对文件或者命令行输入进行随机打乱并输出到标准输出或者指定的文件中，还可以指定shuf的随机模式(有放回地抽取)shuf命令格式12345Usage: shuf [OPTION]... [FILE] or: shuf -e [OPTION]... [ARG]... or: shuf -i LO-HI [OPTION]...Write a random permutation of the input lines to standard output.shuf参数参数完整参数说明-e--echo将参数作为输入信息进行随机打乱-i--input-range=LO-HI在特定范围内生成随机数-n--head-count=COUNT最大输出行数-o--output=FILE指定输出文件--random-source=FILEget random bytes from FILE-r--repeat有放回地抽取，需要结合-n参数一同使用-z--zero-terminated以0 结束行而非换行符shuf使用实例测试文件1234567891011cat test.txt line1 line2 line3 line4 line5 line6 line7 line8 line9 line10shuf默认行为123456789101112shuf test.txt# 将test.txt随机打乱 line2 line9 line7 line5 line10 line6 line8 line3 line4 line1-e-将参数作为输入信息进行随机打乱12345678910111213shuf -e "abc" "def" "mbc" mbc abc defa=badadb=asdfc=sadfashuf -e $a $b $c# 变量拓展 badad sadfa asdf-i-在指定范围内生成随机数12345678910111213# 生成1-10范围内的随机数# 包括1和10shuf -i 1-10 3 7 4 6 1 9 2 5 10 8-n-最大输出行数12345# 输出随机打乱后结果的其中3行shuf -n 3 test.txt line4 line5 line9-o-指定输出文件123456789101112131415# 随机打乱并将结果输出到shuf.txtshuf test.txt -o shuf.txt# 查看结果cat shuf.txt line7 line1 line4 line6 line2 line9 line3 line5 line8 line10-r-有放回地抽取1234567891011121314151617# 有放回的抽取15行结果shuf -n 15 -r test.txt line6 line9 line6 line9 line8 line1 line6 line1 line2 line1 line10 line7 line10 line10 line8-r参数一定要结合-n参数一同使用，不然会一直运行有放回地抽取，相当于死循环，一直输出参考链接给初学者看的 shuf 命令教程Linux shuf Command Tutorial for Beginners (with Examples)]]></content>
