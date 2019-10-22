@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python绘图系列-给boxplot添加统计性的注释]]></title>
+    <url>%2Fposts%2F26853.html</url>
+    <content type="text"><![CDATA[这里写摘要，显示更好看背景这篇文章起源于R绘图系列-带有significant信息的boxplot，因为R中有可以对boxplot两两样本之间添加显著性注释的包，这里对应地记录一下Python中实现相同目的需要的包和基本命令。参考链接statannot的Githubstatannot使用example]]></content>
+      <categories>
+        <category>Python</category>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>annotation</tag>
+        <tag>boxplot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[R绘图系列-带有significant信息的boxplot]]></title>
+    <url>%2Fposts%2F40911.html</url>
+    <content type="text"><![CDATA[这篇文章记录了使用R中的ggsignif包对boxplot两两样本之间添加显著性注释的过程；其实这个包可以两两对比的使用ggplot2画图的都可以添加，对任何可以两两对比的、使用ggplot2画图的都可以添加。背景boxplot既可以很好地显示某个属性内部样本点的变化，也可以与其他属性进行对比，所以使用非常广泛。但是有时候我们需要对属性之间的样本点变化有个准确的度量，也就是比较两个样本是不是存在显著性地差异，这个时候就需要在原始的boxplot上加上样本之间假设检验的显著性信息。ggsignifR中的ggsignif就是专门解决前面遇到问题的包，其他包如ggpubr也可以达到类似的目的，这里主要学习ggsignif，因为其是基于ggplot2的语法，相当于是ggplot2的一个拓展，这也就意味着其不仅可以对boxplot添加显著性，对于任何可以两两对比的使用ggplot2画图的都可以添加，很是方便；同时对熟悉ggplot2的人来说也比较容易上手。下面来简单介绍其使用。安装12345# 安装install.packages("ggsignif")# 导入包library(ggplot2)library(ggsignif)简单绘制1234ggplot(iris, aes(x=Species, y=Sepal.Length)) + geom_boxplot() + geom_signif(comparisons = list(c("versicolor", "virginica")), map_signif_level=TRUE)注意默认的检验的两个样本的非参检验(不需要样本符合正太分布)：‘Mann-Whitney’ test.(wilcox.test)自定义绘制123456789101112# 两两比较的列表compaired &lt;- list(c("versicolor", "virginica"), c("versicolor","setosa"), c("virginica","setosa"))# 使用t.test代替默认的wilcox.testggplot(iris, aes(Species, Sepal.Width, fill = Species)) + geom_boxplot() + ylim(1.5, 6.5) + geom_signif(comparisons = compaired, step_increase = 0.3, map_signif_level = F, test = t.test)step_increase：调整每个显著性标记之间的间隔。test：指定要使用的检验类型，默认是wilcox.testmap_signif_level：是显示具体pvalue还是显示符号c(&quot;***&quot;=0.001,&quot;**&quot;=0.01, &quot;*&quot;=0.05)，可以自行指定符号。12345678ggplot(iris, aes(Species, Sepal.Width, fill = Species)) + geom_boxplot() + ylim(1.5, 6.5) + geom_signif(comparisons = compaired, map_signif_level = F, y_position=c(4,5,6), tip_length = c(0), test = t.test)y_position：指定显著性标记的高度，如y_position=c(4,5,6)tip_length：设置横线两端向下生出的长度，如 tip_length = c(0)参考链接ggsignif的Githubggsignif的文档ggsignif官方介绍Boxplot | 用R画一个漂亮的boxplot神奇小工具丨ggplot绘图显著性添加工具—ggsignifR作图 显著性绘制工具-ggsignif]]></content>
+      <categories>
+        <category>R</category>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>boxplot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python绘图系列-处理annotation重叠]]></title>
+    <url>%2Fposts%2F46875.html</url>
+    <content type="text"><![CDATA[这篇文章记录了在R和Python中对annotation重叠进行自动调整的包，便于日后查询使用。背景之前不管在使用R语言绘图还是Python绘图都会涉及到对图中的某些点进行注释的问题，点比较少并且分得开也还好，但是一旦点比较多或者想要标注的点比较密集就很容易遇到annotation重叠的问题，这种情况下自己慢慢调整就非常费劲。今天刚好看到有文章在分享关于解决R中annotation注释重叠的问题(专门的基于ggplot2的包来解决这个问题)，顺藤摸瓜居然发现Python也已经有了类似的包可以解决annotation重叠(白高兴一场，本来以为自己可以开发一个自动调整annotation的包来着)，这里就记录一下这个包，日后需要的时候方便。Python-adjustText在具体使用方面总的来说是先使用Matplotlib的命令将图画出来，然后再使用该包的一些命令对annotation进行调整(没有脱离于Matplotlib，大大增强了其易用性)：Github链接文档wiki使用exampleR-ggrepel上面的adjustText就是基于R包ggrepel思想来开发的，该包在我看来最大的好处就是没有脱离于ggplot2(属于ggplot2的拓展)，也就是说使用者可以在常规地ggplot2绘图脚本之后添加一行命令就可以达到调整annotation重叠的目的(吹爆这个特点)：Github链接ggrepel examples]]></content>
+      <categories>
+        <category>Python</category>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>annotation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[设置Github项目徽章]]></title>
     <url>%2Fposts%2F19563.html</url>
     <content type="text"><![CDATA[这篇文章记录了为自己的项目增加徽章的过程。背景在Github上我们经常能看到一些项目的小徽章(Badge)，这些小徽章可以很简洁明了地介绍项目信息，比如下面pandas的项目徽章：Latest ReleasePackage StatusLicenseBuild StatusCoverageDownloadsGitter这篇文章将会学习如何给自己的项目加上一些项目徽章。徽章生成网站GitHub 项目的徽章可以使用Shields来生成。使用该网站生成徽章主要有两种方法：Shields自动推荐。这种方法只需要你提供Github项目的url链接，Shields会依据你的项目项目信息进行推荐，一般会包括Github issues、Github forks、Github stars、Github license、Twitter。生成自定义的徽章标签。如果想要自己修改徽章的文字和颜色，Shields也支持自定义的方式来进行设置。自动推荐徽章得到徽章打开Shields，输入Github项目链接，点击Suggest badges即可，具体效果如下：设置徽章点击图标或者链接，即可进入设置页，设置图标的颜色、样式等属性，最后选择你想要的 markdown 或者 URL 代码到 README.md 或者项目的文档页面即可:效果图：自定义徽章打开Shields，找到Your Badge，输入label、message和color，Make Badge即可：最后将得到的信息加入到项目的README.md中：123# 设置了超链接[![blog__reprint](https://img.shields.io/badge/showteeth-blog__reprint-yellow)](https://github.com/showteeth/blog_reprint)[![GitHub forks](https://img.shields.io/github/forks/showteeth/blog_reprint)](https://github.com/showteeth/blog_reprint/network)最终效果图：总结：实际上徽章就是Shields帮助我们生成的一些小图片，得到这些图片后我们可以将其以markdown的语法加载.md文件中；徽章是静态的，不会根据项目内容的改变而做出自动的调整，所以如果项目更改了和徽章相关的信息就需要手动对其进行修改。]]></content>
